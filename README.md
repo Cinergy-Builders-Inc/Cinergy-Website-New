@@ -360,3 +360,5 @@ This version includes the latest updates:
 * Header + footer social icons
 * More layered black-and-green design
 * Better visual depth throughout the site
+
+MADE AND CODED BY: DOMINICK BIRGE
