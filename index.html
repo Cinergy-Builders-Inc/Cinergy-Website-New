@@ -7,9 +7,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>  <link rel="icon" type="image/png" href="images/favicon.png">
-</head>
+<script defer src="script.js"></script></head>
 <body>
 
 <div class="topbar">
@@ -34,17 +34,16 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <div class="nav-dropdown">
-        <button class="nav-drop-toggle" aria-expanded="false">About <i class="fa-solid fa-angle-down"></i></button>
+        <a href="about.html" class="nav-link-main">About</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-label="Open About menu"><i class="fa-solid fa-angle-down"></i></button>
         <div class="nav-dropdown-menu">
-          <a href="about.html">About Us</a>
-          <a href="about.html#team">Leadership Team</a>
-          <a href="about.html#tpa">About TPA's</a>
+          <a href="about-tpa.html">About TPA</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button class="nav-drop-toggle" aria-expanded="false">Services <i class="fa-solid fa-angle-down"></i></button>
+        <a href="services.html" class="nav-link-main">Services</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-label="Open Services menu"><i class="fa-solid fa-angle-down"></i></button>
         <div class="nav-dropdown-menu">
-          <a href="services.html">All Services</a>
           <a href="services.html#catastrophic-response">24/7 Catastrophic Response</a>
           <a href="services.html#water-damage">Water Damage Restoration</a>
           <a href="services.html#fire-damage">Fire Damage Restoration</a>
@@ -62,13 +61,11 @@
       <a class="nav-cta cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">24/7 Call Now</span><span class="cta-shine" aria-hidden="true"></span></a>
     </nav>
 
-    
-<div class="header-socials">
-  <a href="https://www.facebook.com/cinergyrestorations/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-  <a href="https://www.instagram.com/cinergyrestoration/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/cinergyrestoration" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-</div>
-
+    <div class="header-socials">
+      <a href="https://www.facebook.com/cinergyrestorations/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/cinergyrestoration/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/cinergyrestoration" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
   </div>
 </header>
 
@@ -91,8 +88,6 @@
   <div class="container">
     <div class="section-heading center reveal">
       <div class="section-tag">Core Services</div>
-      <h2>Click a service to jump to its full section.</h2>
-      <p>Each service card below links directly to the matching section on the Services page.</p>
     </div>
     <div class="cards cards-4">
       <a class="card service-card bubble-card reveal" href="services.html#water-damage">
@@ -124,7 +119,7 @@
     <div class="section-heading center">
       <div class="section-tag">Project Photos</div>
       <h2>Cleaner slider framing</h2>
-      <p>The slide photos are now styled to fill the frame better while still staying responsive on smaller screens.</p>
+      <p>The slide photos fit the frame more smoothly and stay responsive on smaller screens.</p>
     </div>
     <div class="slider clean-slider">
       <img src="images/slide-1.jpg" class="slide active" alt="Restoration project photo 1">
@@ -154,17 +149,14 @@
     <div>
       <h3>Cinergy Restoration</h3>
       <p>Fast, reliable help for water, fire, mold, storm damage, and reconstruction across Florida service areas.</p>
-      
-<div class="social-links footer-socials">
-  <a href="https://www.facebook.com/cinergyrestorations/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-  <a href="https://www.instagram.com/cinergyrestoration/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/cinergyrestoration" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-</div>
-
+      <div class="social-links footer-socials">
+        <a href="https://www.facebook.com/cinergyrestorations/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/cinergyrestoration/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/cinergyrestoration" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
     </div>
     <div>
       <h4>Quick Links</h4>
-      <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="areas-served.html">Areas Served</a>
       <span>Broward County</span>
@@ -185,13 +177,12 @@
       <h4>Emergency Service</h4>
       <p>Available day or night for urgent property damage response and next-step guidance.</p>
       <a class="footer-cta cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">Call 24/7</span><span class="cta-shine" aria-hidden="true"></span></a>
+      <div class="footer-badge-wrap">
+        <img src="images/iicrc-certified-firm.png" alt="IICRC Certified Firm" class="footer-badge">
+      </div>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Cinergy Restoration. All rights reserved.</div>
-
-  <div class="footer-badge-wrap">
-    <img src="images/iicrc-certified-firm.png" alt="IICRC Certified Firm" class="footer-badge">
-  </div>
+  <div class="footer-bottom">© 2026 Cinergy Restoration. All rights reserved. Website by: Dominick Birge</div>
 </footer>
 
 <a class="floating-call cta-attention pulse-ring" href="tel:9543977707" aria-label="Call now"><i class="fa-solid fa-phone"></i><span class="cta-text">Call Now</span><span class="cta-shine" aria-hidden="true"></span></a>
