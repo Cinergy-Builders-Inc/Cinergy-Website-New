@@ -31,3 +31,28 @@ To deploy:
 3. Deploy the site
 
 Website built and maintained by Dominick Birge.
+
+
+## Service pages added
+The Services dropdown now links to dedicated individual pages:
+- catastrophic-response.html
+- water-damage.html
+- fire-damage.html
+- mold-remediation.html
+- reconstruction.html
+- roof-tarp.html
+- biohazard-cleanup.html
+- board-up.html
+- packout-services.html
+
+## Service image filenames
+You can replace these images in the `images` folder:
+- service-catastrophic-response.jpg
+- service-water-damage.jpg
+- service-fire-damage.jpg
+- service-mold-remediation.jpg
+- service-reconstruction.jpg
+- service-roof-tarp.jpg
+- service-biohazard-cleanup.jpg
+- service-board-up.jpg
+- service-packout-services.jpg
