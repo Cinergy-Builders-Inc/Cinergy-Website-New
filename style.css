@@ -1014,3 +1014,261 @@ textarea{min-height:160px;resize:vertical}
     white-space:normal;
   }
 }
+
+
+/* Home gallery button */
+.gallery-button-wrap{
+  display:flex;
+  justify-content:center;
+  margin-top:24px;
+}
+
+/* Completed work gallery */
+.completed-work-slider{
+  height:560px;
+}
+.completed-work-slider .slide{
+  object-fit:cover;
+}
+@media (max-width: 760px){
+  .completed-work-slider{
+    height:300px;
+  }
+}
+
+
+/* Dropdown interaction fix */
+.nav-dropdown{
+  position:relative;
+}
+.nav-dropdown .nav-dropdown-menu{
+  z-index:300 !important;
+}
+.nav-dropdown.open .nav-dropdown-menu{
+  display:flex !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+  transform:translateY(0) !important;
+}
+.nav-drop-toggle,
+.services-trigger{
+  cursor:pointer;
+}
+.services-trigger{
+  background:none;
+  border:none;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.nav-dropdown.open .fa-angle-down{
+  transform:rotate(180deg);
+}
+.nav-drop-toggle .fa-angle-down,
+.services-trigger .fa-angle-down{
+  transition:transform .2s ease;
+}
+
+
+/* Header spacing and interaction improvements */
+.site-header{
+  overflow: visible;
+}
+.header-inner{
+  overflow: visible;
+}
+
+/* Desktop refinements */
+@media (min-width: 981px){
+  .header-inner{
+    grid-template-columns: auto minmax(0,1fr) auto !important;
+    gap: 14px !important;
+  }
+
+  .main-nav{
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+
+  .main-nav > a,
+  .nav-link-main,
+  .nav-drop-toggle,
+  .services-trigger{
+    padding: 8px 10px !important;
+    font-size: 14px !important;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown{
+    flex-shrink: 0;
+  }
+
+  .nav-cta{
+    margin-left: 10px !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .header-socials{
+    gap: 8px !important;
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+
+  .header-socials a{
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  /* Better desktop dropdown UX: open on hover so users only need one click on a menu item */
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu,
+  .nav-dropdown.open .nav-dropdown-menu{
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+  }
+
+  .nav-dropdown-menu{
+    top: calc(100% + 8px) !important;
+  }
+}
+
+/* Small dynamic touches */
+.main-nav > a,
+.nav-link-main,
+.services-trigger{
+  position: relative;
+}
+
+.main-nav > a::after,
+.nav-link-main::after,
+.services-trigger::after{
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(76,255,71,.9), transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .22s ease;
+}
+
+.main-nav > a:hover::after,
+.nav-link-main:hover::after,
+.services-trigger:hover::after{
+  transform: scaleX(1);
+}
+
+.site-header::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(76,255,71,.35), transparent);
+  pointer-events: none;
+}
+
+
+
+
+/* Restore original header layout with minor spacing fix */
+@media (min-width: 981px){
+  .header-inner{
+    display:grid !important;
+    grid-template-columns:auto 1fr auto !important;
+    align-items:center !important;
+    gap:18px !important;
+    padding:12px 20px !important;
+  }
+
+  .main-nav{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:18px !important;
+    flex-wrap:nowrap !important;
+  }
+
+  .main-nav > a,
+  .nav-link-main,
+  .services-trigger{
+    font-size:15px !important;
+    white-space:nowrap;
+  }
+
+  .nav-cta{
+    margin-right:12px !important;
+  }
+
+  .header-socials{
+    display:flex !important;
+    gap:10px !important;
+    align-items:center !important;
+  }
+
+  .header-right,
+  .header-actions{
+    display:flex !important;
+    align-items:center !important;
+    gap:12px !important;
+  }
+}
+
+
+/* Fix LinkedIn icon alignment in header */
+@media (min-width: 981px){
+  .header-socials{
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:12px !important;
+    min-width:150px !important;
+  }
+
+  .header-socials a{
+    flex:0 0 auto !important;
+    display:inline-flex !important;
+  }
+}
+
+
+/* Move Cinergy logo/brand block further left */
+@media (min-width: 981px){
+  .header-inner{
+    padding-left: 10px !important;
+  }
+
+  .brand,
+  .site-brand,
+  .header-brand{
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    transform: translateX(-14px);
+  }
+}
+
+
+/* Push logo farther left and give nav more separation */
+@media (min-width: 981px){
+  .brand,
+  .site-brand,
+  .header-brand{
+    transform: translateX(-32px) !important;
+    max-width: 320px;
+  }
+
+  .main-nav{
+    margin-left: 28px !important;
+  }
+}
