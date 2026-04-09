@@ -86,7 +86,7 @@
       <p>Share the basics of your project, the type of damage involved, and the best way to reach you. A team member from Cinergy will contact you after the form has been submitted.</p>
     </div>
 
-    <form class="estimate-form reveal" action="https://api.web3forms.com/submit" method="POST">
+    <form id="estimateForm" class="estimate-form reveal" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="43685d5e-cc2c-44f1-b61c-8aacda015450">
       <input type="hidden" name="subject" value="New Estimate Request - Cinergy Restoration">
       <input type="hidden" name="from_name" value="Cinergy Restoration Website">
@@ -122,6 +122,7 @@
         <textarea name="message" placeholder="Tell us what happened, where the property is located, and anything else we should know." required></textarea>
       </label>
       <button type="submit" class="btn btn-primary full">Send Request</button>
+      <div id="formStatus" class="form-status" aria-live="polite"></div>
     </form>
   </div>
 </section>
