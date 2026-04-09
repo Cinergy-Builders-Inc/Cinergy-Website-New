@@ -3,67 +3,48 @@
 Live site:
 https://cinergy-restoration.vercel.app
 
-## What was added in this version
-- New `services.html` page
-- Services dropdown in the header on every page
-- Homepage service bubbles/cards now click to matching service sections
-- About page rebuilt with 7 individual team cards
-- Team cards use drop-in scroll animation
-- Added layered black-and-green visual depth
-- Added animated Florida zip checker section
-- Mobile fixes for before/after and slider sections
-- Slider now shows the full image instead of cropping
-- Footer keeps Facebook + YouTube, header keeps Facebook + X + YouTube
+## What changed in this revision
+- Added a dedicated `areas-served.html` page
+- Moved zip-code search off the homepage and onto its own page
+- Replaced X with Instagram and kept Facebook + LinkedIn
+- Improved header button styling and overall header spacing
+- Made all 24/7 buttons use the logo-green color for better contrast
+- Updated slide photos to fit the frame better on desktop and stay responsive on mobile
+- Added an About dropdown with `About Us`, `Leadership Team`, and `About TPA's`
+- Added a TPA section to the About page
+- Added an address field to the estimate form
+- Kept the 7-person About page card layout with brief intros under each photo
 
-## New image files used
-Place these in `/images`:
+## About page image file names
+Use these exact image names in `/images`:
+- ceo.jpg
+- operations-manager.jpg
+- sales-manager.jpg
 - brand-ambassador.jpg
 - program-director.jpg
 - sales-manager-2.jpg
 - sales-manager-3.jpg
-- services-banner.jpg
 
-If you do not replace them yet, fallback images were added for now.
+## Areas served checker
+The checker now lives on `areas-served.html`.
+It uses the Florida zip list currently loaded into `script.js`.
+You can add or remove zips later by editing `const serviceZipData = { ... }`.
 
-## Service zip code map
-The Florida map uses starter zip-code data in `script.js`.
-Search for:
-`const serviceZipData = {`
-and replace/add your real zip codes and positions.
-
-Format:
-"33301": {x: 56, y: 76, city: "Fort Lauderdale"}
-
-- `x` is horizontal percent on the map
-- `y` is vertical percent on the map
-
-## Estimate form
-Web3Forms is already connected with your current key.
-
-## Deploy
-Upload the contents of the folder or push to GitHub and redeploy on Vercel.
+## Social links loaded
+- Facebook
+- Instagram
+- LinkedIn
 
 
-## About page photo file names
-
-Keep these exact file names in the `images` folder for the 7 About-page cards:
-
-- `ceo.jpg`
-- `operations-manager.jpg`
-- `sales-manager.jpg`
-- `brand-ambassador.jpg`
-- `program-director.jpg`
-- `sales-manager-2.jpg`
-- `sales-manager-3.jpg`
-
-The original three image tags were kept the same:
-- `ceo.jpg`
-- `operations-manager.jpg`
-- `sales-manager.jpg`
-
-## Latest update in this zip
-
-- Added cleaner animated 24/7 call-to-action buttons
-- Upgraded the contact page call button
-- Kept the site fully mobile responsive
-- Preserved the Florida-only zip-code map data
+## Latest requested updates
+- Footer now includes:
+  - 5054 Hiatus Rd, Sunrise FL 33351
+  - FL Certification CGC0055114
+  - MSR518314 Alabama State Certified Contractor 2500884
+- Footer Areas Served list now includes:
+  - Broward County
+  - Palm Beach County
+  - Dade County
+  - Sarasota County
+- About-page team cards now bounce in on reveal
+- Florida zip checker updated with the newest Florida zip list you provided
