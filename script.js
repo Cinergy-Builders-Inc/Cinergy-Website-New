@@ -694,3 +694,52 @@ if (zipInput) zipInput.addEventListener('keydown', (e) => {
     runZipCheck();
   }
 });
+
+
+
+// Estimate form AJAX submit with in-page thank-you message
+const estimateForm = document.getElementById('estimateForm');
+const formStatus = document.getElementById('formStatus');
+
+if (estimateForm) {
+  estimateForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!formStatus) return;
+
+    formStatus.className = 'form-status pending';
+    formStatus.textContent = 'Sending your request...';
+
+    try {
+      const formData = new FormData(estimateForm);
+      const response = await fetch(estimateForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        estimateForm.reset();
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Thanks for your submission. A Cinergy team member will contact you soon.';
+      } else {
+        formStatus.className = 'form-status error';
+        formStatus.textContent = 'We could not send your form right now. Please try again or call us directly.';
+      }
+    } catch (err) {
+      formStatus.className = 'form-status error';
+      formStatus.textContent = 'We could not send your form right now. Please try again or call us directly.';
+    }
+  });
+}
+
+// Close mobile nav when a link is tapped
+document.querySelectorAll('.main-nav a').forEach((link) => {
+  link.addEventListener('click', () => {
+    const nav = document.querySelector('.main-nav');
+    const toggle = document.querySelector('.menu-toggle');
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
