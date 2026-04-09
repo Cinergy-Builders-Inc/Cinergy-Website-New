@@ -14,6 +14,7 @@ const nav = document.querySelector('.main-nav');
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
+    document.body.classList.toggle('nav-open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 }
@@ -739,6 +740,7 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
     const toggle = document.querySelector('.menu-toggle');
     if (nav && nav.classList.contains('open')) {
       nav.classList.remove('open');
+      document.body.classList.remove('nav-open');
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
     }
   });
