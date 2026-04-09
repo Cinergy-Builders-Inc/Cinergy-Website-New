@@ -10,10 +10,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
-
 </head>
 <body>
-
 
 <div class="topbar">
   <div class="container topbar-inner">
@@ -28,7 +26,7 @@
       <img src="images/logo.jpg" alt="Cinergy Restoration logo" class="logo">
       <div class="brand-text">
         <strong>Cinergy Restoration</strong>
-        <span>Emergency Restoration & Reconstruction</span>
+        <span>Emergency Restoration &amp; Reconstruction</span>
       </div>
     </a>
 
@@ -37,78 +35,137 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <button class="nav-drop-toggle" aria-expanded="false">Services <i class="fa-solid fa-angle-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="services.html">All Services</a>
+          <a href="services.html#catastrophic-response">24/7 Catastrophic Response</a>
+          <a href="services.html#water-damage">Water Damage Restoration</a>
+          <a href="services.html#fire-damage">Fire Damage Restoration</a>
+          <a href="services.html#mold-remediation">Mold Remediation</a>
+          <a href="services.html#reconstruction">Reconstruction &amp; Renovation</a>
+          <a href="services.html#roof-tarp">Roof Tarp Services</a>
+          <a href="services.html#biohazard-cleanup">Biohazard Cleanup</a>
+          <a href="services.html#board-up">Board Up Services</a>
+          <a href="services.html#packout-services">Packout Services</a>
+        </div>
+      </div>
       <a href="estimates.html">Estimate</a>
       <a href="contact.html">Contact</a>
-      <a class="nav-cta" href="tel:9543977707">24/7 Call Now</a>
+      <a class="nav-cta cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">24/7 Call Now</span><span class="cta-shine" aria-hidden="true"></span></a>
     </nav>
+
     <div class="header-socials">
       <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
       <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
     </div>
-
   </div>
 </header>
 
 
-<section class="hero">
+<section class="hero hero-home">
   <div class="hero-bg" style="background-image:url('images/hero-main.jpg');"></div>
   <div class="hero-overlay"></div>
-  <div class="container hero-content">
+  <div class="container hero-content hero-panel reveal">
     <div class="eyebrow">24/7 Emergency Response</div>
-    <h1>Trusted restoration and reconstruction when your property needs help now.</h1>
-    <p>Serving South Florida with fast, professional support for water damage, fire damage, mold remediation, storm response, and full in-house reconstruction.</p>
+    <h1>Restoration and reconstruction that feels organized, responsive, and professional from day one.</h1>
+    <p>When damage happens, Cinergy Restoration helps homeowners, businesses, and property managers move quickly with one coordinated team for mitigation, remediation, and rebuild support.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="estimates.html">Get a Free Consultation</a>
-      <a class="btn btn-secondary" href="tel:9543977707">Call 24/7</a>
+      <a class="btn btn-secondary" href="tel:9543977707"><span class="cta-text">Call 24/7</span><span class="cta-shine" aria-hidden="true"></span></a>
+    </div>
+    <div class="hero-points">
+      <span><i class="fa-solid fa-circle-check"></i> Water, fire, mold, and storm support</span>
+      <span><i class="fa-solid fa-circle-check"></i> Residential and commercial services</span>
+      <span><i class="fa-solid fa-circle-check"></i> In-house reconstruction</span>
     </div>
   </div>
 </section>
 
+<section class="section trust-strip-section">
+  <div class="container trust-strip reveal">
+    <div class="trust-item"><strong>30+ Years</strong><span>Industry experience</span></div>
+    <div class="trust-item"><strong>24/7</strong><span>Emergency response</span></div>
+    <div class="trust-item"><strong>Start to Finish</strong><span>Mitigation to rebuild</span></div>
+    <div class="trust-item"><strong>South Florida</strong><span>Service coverage</span></div>
+  </div>
+</section>
+
 <section class="section">
-  <div class="container intro-grid">
-    <div>
+  <div class="container split-intro">
+    <div class="stack reveal">
       <div class="section-tag">Why Homeowners Choose Cinergy</div>
       <h2>Emergency disaster restoration specialists with a full-service approach.</h2>
-    </div>
-    <div>
       <p>For over 30 years, Cinergy Restoration has provided comprehensive restoration and remediation services in Florida. Our team handles water mitigation, mold remediation, fire damage restoration, and complete rebuilds with one clear process and one accountable team.</p>
       <p>When a loss happens, speed matters. We respond around the clock for water damage, storm-related emergencies, tarping, and board-up services so your property can be stabilized quickly and the restoration process can begin without unnecessary delays.</p>
+    </div>
+    <div class="feature-panel reveal">
+      <h3>Why this site converts better</h3>
+      <ul class="icon-list">
+        <li><i class="fa-solid fa-bolt"></i><span>Clear emergency calls to action</span></li>
+        <li><i class="fa-solid fa-layer-group"></i><span>Cleaner layout with layered black-and-green depth</span></li>
+        <li><i class="fa-solid fa-mobile-screen-button"></i><span>More polished mobile experience</span></li>
+        <li><i class="fa-solid fa-shield-heart"></i><span>Trust signals throughout the page</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <section class="section alt">
   <div class="container">
-    <div class="section-tag">Core Services</div>
-    <h2 class="center">Built to match the way real restoration jobs happen.</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Water Damage Restoration</h3>
-        <p>From plumbing leaks to flood events, we remove standing water, dry affected areas, and help prevent further damage and mold growth.</p>
-      </article>
-      <article class="card">
-        <h3>Fire Damage Restoration</h3>
-        <p>We remove damaged materials, clean impacted areas, and rebuild properly so your property can be restored with care and efficiency.</p>
-      </article>
-      <article class="card">
+    <div class="section-heading center reveal">
+      <div class="section-tag">Core Services</div>
+      <h2>Click a service to jump to its full section.</h2>
+      <p>Each service card below links directly to the matching section on the new Services page.</p>
+    </div>
+    <div class="cards cards-4">
+      <a class="card service-card bubble-card reveal" href="services.html#water-damage">
+        <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+        <h3>Water Damage</h3>
+        <p>Fast extraction, dry-out support, cleanup, and restoration after leaks, flooding, or storm-related water intrusion.</p>
+      </a>
+      <a class="card service-card bubble-card reveal" href="services.html#fire-damage">
+        <div class="service-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+        <h3>Fire Damage</h3>
+        <p>Cleanup, repair coordination, and rebuilding support after smoke, soot, and structural fire damage.</p>
+      </a>
+      <a class="card service-card bubble-card reveal" href="services.html#mold-remediation">
+        <div class="service-icon"><i class="fa-solid fa-house-medical"></i></div>
         <h3>Mold Remediation</h3>
-        <p>Our team safely addresses mold issues using proven containment and removal practices designed to limit spread and protect the space.</p>
-      </article>
-      <article class="card">
-        <h3>Reconstruction Services</h3>
-        <p>Because reconstruction is handled in-house, you avoid juggling multiple contractors and get a smoother path from mitigation to final finish.</p>
-      </article>
+        <p>Containment-minded remediation that focuses on safe removal and a cleaner, healthier indoor environment.</p>
+      </a>
+      <a class="card service-card bubble-card reveal" href="services.html#reconstruction">
+        <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
+        <h3>Reconstruction</h3>
+        <p>In-house renovation and rebuild work that keeps the project cohesive from mitigation through final completion.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section banner-section">
+  <div class="container banner-card reveal">
+    <div>
+      <div class="section-tag">Emergency Service</div>
+      <h2>Need immediate help?</h2>
+      <p>Call now for rapid help with water, fire, mold, storm damage, emergency tarping, or board-up support.</p>
+    </div>
+    <div class="banner-actions">
+      <a class="btn btn-primary" href="tel:9543977707">Call 954-397-7707</a>
+      <a class="btn btn-secondary" href="estimates.html">Request Estimate</a>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container slider-shell">
-    <div class="section-tag">Project Photos</div>
-    <h2>Plug-and-play image slider</h2>
-    <p class="slider-copy">Swap these photos by replacing the files in your <strong>images</strong> folder with the same filenames.</p>
-    <div class="slider">
+  <div class="container slider-shell reveal">
+    <div class="section-heading center">
+      <div class="section-tag">Project Photos</div>
+      <h2>Plug-and-play image slider</h2>
+      <p>Slider photos now show the full image with a darker floating background treatment.</p>
+    </div>
+    <div class="slider clean-slider">
       <img src="images/slide-1.jpg" class="slide active" alt="Restoration project photo 1">
       <img src="images/slide-2.jpg" class="slide" alt="Restoration project photo 2">
       <img src="images/slide-3.jpg" class="slide" alt="Restoration project photo 3">
@@ -117,15 +174,18 @@
 </section>
 
 <section class="section alt">
-  <div class="container before-after">
-    <div class="section-tag">Before & After</div>
-    <h2 class="center">Show the difference your work makes.</h2>
+  <div class="container reveal">
+    <div class="section-heading center">
+      <div class="section-tag">Before &amp; After</div>
+      <h2>Show the difference your work makes.</h2>
+      <p>The before-and-after section stacks more cleanly on mobile and avoids cutting images off.</p>
+    </div>
     <div class="compare-grid">
-      <figure>
+      <figure class="compare-card">
         <img src="images/before.jpg" alt="Before restoration photo">
         <figcaption>Before</figcaption>
       </figure>
-      <figure>
+      <figure class="compare-card">
         <img src="images/after.jpg" alt="After restoration photo">
         <figcaption>After</figcaption>
       </figure>
@@ -133,14 +193,31 @@
   </div>
 </section>
 
-<section class="section cta-band">
-  <div class="container cta-band-inner">
-    <div>
-      <div class="section-tag">Need Immediate Assistance?</div>
-      <h2>Call now for rapid help with water, fire, mold, or storm damage.</h2>
-      <p>Our team is available 24/7 to respond, stabilize the property, and guide the next steps.</p>
+<section class="section">
+  <div class="container reveal">
+    <div class="section-heading center">
+      <div class="section-tag">Florida Service Area</div>
+      <h2>Check your zip code and watch the pin drop.</h2>
+      <p>Enter a zip code we serve to animate the Florida map and confirm coverage.</p>
     </div>
-    <a class="btn btn-primary" href="tel:9543977707">954-397-7707</a>
+    <div class="service-area-card">
+      <div class="zip-checker">
+        <label for="zipInput">Enter your zip code</label>
+        <div class="zip-row">
+          <input id="zipInput" type="text" maxlength="5" placeholder="33301">
+          <button class="btn btn-primary" id="zipCheckBtn" type="button">Check Service Area</button>
+        </div>
+        <p id="zipResult" class="zip-result">We serve South Florida and surrounding areas. Enter a zip code to check availability.</p>
+      </div>
+      <div class="map-shell">
+        <div class="florida-wrap" id="floridaMapWrap">
+          <svg viewBox="0 0 260 420" class="florida-svg" aria-hidden="true">
+            <path id="floridaShape" d="M54 38l102 1 38 33-4 13-48-3-15 19 37 31-11 26 17 31-4 22 14 33-10 35 12 26-6 19 7 27-23 38-28 4-28-18-10-31-26-11-16-40 5-23-14-17 11-34 4-58-17-22 12-25-11-33 18-22-4-20z"/>
+          </svg>
+          <div class="map-pin" id="mapPin" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -149,18 +226,16 @@
   <div class="container footer-grid">
     <div>
       <h3>Cinergy Restoration</h3>
-      <p>24/7 emergency disaster restoration services for homeowners, property managers, and commercial properties across South Florida.</p>
-      
-<div class="social-links">
-  <a href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-  <a href="#" aria-label="X" title="X"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="#" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-</div>
-
+      <p>Fast, reliable help for water, fire, mold, storm damage, and reconstruction across South Florida.</p>
+      <div class="social-links footer-socials">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
     </div>
     <div>
       <h4>Quick Links</h4>
       <a href="about.html">About</a>
+      <a href="services.html">Services</a>
       <a href="estimates.html">Estimate</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -171,20 +246,15 @@
       <span>South Florida</span>
     </div>
     <div>
-      <h4>Follow</h4>
-      
-<div class="social-links">
-  <a href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-  <a href="#" aria-label="X" title="X"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="#" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-</div>
-
+      <h4>Emergency Service</h4>
+      <p>Available 24/7 for urgent property damage response and project follow-through.</p>
+      <a class="footer-cta cta-attention pulse-ring" href="estimates.html">Request Service</a>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Cinergy Restoration. All rights reserved. Created by Dominick Birge</div>
+  <div class="footer-bottom">© 2026 Cinergy Restoration. All rights reserved.</div>
 </footer>
 
-<a class="floating-call" href="tel:9543977707" aria-label="Call now">Call Now</a>
+<a class="floating-call cta-attention pulse-ring" href="tel:9543977707" aria-label="Call now"><i class="fa-solid fa-phone"></i><span><span class="cta-text">Call Now</span><span class="cta-shine" aria-hidden="true"></span></span></a>
 
 </body>
 </html>
