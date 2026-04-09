@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
+<head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cinergy Restoration</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,14 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>
+<script defer src="script.js"></script>  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 
 <div class="topbar">
   <div class="container topbar-inner">
     <span>FL Certification CGC0055114 | MSR518314 Alabama State Certified Contractor 2500884</span>
-    <a class="phone-link" href="tel:9543977707">Call 954-397-7707</a>
+    <a class="phone-link cta-link" href="tel:9543977707">Call 954-397-7707</a>
   </div>
 </div>
 
@@ -34,7 +33,14 @@
 
     <nav class="main-nav">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <button class="nav-drop-toggle" aria-expanded="false">About <i class="fa-solid fa-angle-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="about.html">About Us</a>
+          <a href="about.html#team">Leadership Team</a>
+          <a href="about.html#tpa">About TPA's</a>
+        </div>
+      </div>
       <div class="nav-dropdown">
         <button class="nav-drop-toggle" aria-expanded="false">Services <i class="fa-solid fa-angle-down"></i></button>
         <div class="nav-dropdown-menu">
@@ -50,16 +56,19 @@
           <a href="services.html#packout-services">Packout Services</a>
         </div>
       </div>
+      <a href="areas-served.html">Areas Served</a>
       <a href="estimates.html">Estimate</a>
       <a href="contact.html">Contact</a>
       <a class="nav-cta cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">24/7 Call Now</span><span class="cta-shine" aria-hidden="true"></span></a>
     </nav>
 
-    <div class="header-socials">
-      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-    </div>
+    
+<div class="header-socials">
+  <a href="https://www.facebook.com/cinergyrestorations/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/cinergyrestoration/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/in/cinergyrestoration" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+
   </div>
 </header>
 
@@ -73,41 +82,7 @@
     <p>When damage happens, Cinergy Restoration helps homeowners, businesses, and property managers move quickly with one coordinated team for mitigation, remediation, and rebuild support.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="estimates.html">Get a Free Consultation</a>
-      <a class="btn btn-secondary" href="tel:9543977707"><span class="cta-text">Call 24/7</span><span class="cta-shine" aria-hidden="true"></span></a>
-    </div>
-    <div class="hero-points">
-      <span><i class="fa-solid fa-circle-check"></i> Water, fire, mold, and storm support</span>
-      <span><i class="fa-solid fa-circle-check"></i> Residential and commercial services</span>
-      <span><i class="fa-solid fa-circle-check"></i> In-house reconstruction</span>
-    </div>
-  </div>
-</section>
-
-<section class="section trust-strip-section">
-  <div class="container trust-strip reveal">
-    <div class="trust-item"><strong>30+ Years</strong><span>Industry experience</span></div>
-    <div class="trust-item"><strong>24/7</strong><span>Emergency response</span></div>
-    <div class="trust-item"><strong>Start to Finish</strong><span>Mitigation to rebuild</span></div>
-    <div class="trust-item"><strong>South Florida</strong><span>Service coverage</span></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container split-intro">
-    <div class="stack reveal">
-      <div class="section-tag">Why Homeowners Choose Cinergy</div>
-      <h2>Emergency disaster restoration specialists with a full-service approach.</h2>
-      <p>For over 30 years, Cinergy Restoration has provided comprehensive restoration and remediation services in Florida. Our team handles water mitigation, mold remediation, fire damage restoration, and complete rebuilds with one clear process and one accountable team.</p>
-      <p>When a loss happens, speed matters. We respond around the clock for water damage, storm-related emergencies, tarping, and board-up services so your property can be stabilized quickly and the restoration process can begin without unnecessary delays.</p>
-    </div>
-    <div class="feature-panel reveal">
-      <h3>Why this site converts better</h3>
-      <ul class="icon-list">
-        <li><i class="fa-solid fa-bolt"></i><span>Clear emergency calls to action</span></li>
-        <li><i class="fa-solid fa-layer-group"></i><span>Cleaner layout with layered black-and-green depth</span></li>
-        <li><i class="fa-solid fa-mobile-screen-button"></i><span>More polished mobile experience</span></li>
-        <li><i class="fa-solid fa-shield-heart"></i><span>Trust signals throughout the page</span></li>
-      </ul>
+      <a class="btn btn-call cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">Call 24/7</span><span class="cta-shine" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -117,7 +92,7 @@
     <div class="section-heading center reveal">
       <div class="section-tag">Core Services</div>
       <h2>Click a service to jump to its full section.</h2>
-      <p>Each service card below links directly to the matching section on the new Services page.</p>
+      <p>Each service card below links directly to the matching section on the Services page.</p>
     </div>
     <div class="cards cards-4">
       <a class="card service-card bubble-card reveal" href="services.html#water-damage">
@@ -144,26 +119,12 @@
   </div>
 </section>
 
-<section class="section banner-section">
-  <div class="container banner-card reveal">
-    <div>
-      <div class="section-tag">Emergency Service</div>
-      <h2>Need immediate help?</h2>
-      <p>Call now for rapid help with water, fire, mold, storm damage, emergency tarping, or board-up support.</p>
-    </div>
-    <div class="banner-actions">
-      <a class="btn btn-primary" href="tel:9543977707">Call 954-397-7707</a>
-      <a class="btn btn-secondary" href="estimates.html">Request Estimate</a>
-    </div>
-  </div>
-</section>
-
 <section class="section">
   <div class="container slider-shell reveal">
     <div class="section-heading center">
       <div class="section-tag">Project Photos</div>
-      <h2>Plug-and-play image slider</h2>
-      <p>Slider photos now show the full image with a darker floating background treatment.</p>
+      <h2>Cleaner slider framing</h2>
+      <p>The slide photos are now styled to fill the frame better while still staying responsive on smaller screens.</p>
     </div>
     <div class="slider clean-slider">
       <img src="images/slide-1.jpg" class="slide active" alt="Restoration project photo 1">
@@ -173,50 +134,16 @@
   </div>
 </section>
 
-<section class="section alt">
-  <div class="container reveal">
-    <div class="section-heading center">
-      <div class="section-tag">Before &amp; After</div>
-      <h2>Show the difference your work makes.</h2>
-      <p>The before-and-after section stacks more cleanly on mobile and avoids cutting images off.</p>
+<section class="section banner-section">
+  <div class="container banner-card reveal">
+    <div>
+      <div class="section-tag">Areas Served</div>
+      <h2>Search your zip code on its own page.</h2>
+      <p>We moved service-area search into a dedicated page so users can focus on coverage without competing with the homepage content.</p>
     </div>
-    <div class="compare-grid">
-      <figure class="compare-card">
-        <img src="images/before.jpg" alt="Before restoration photo">
-        <figcaption>Before</figcaption>
-      </figure>
-      <figure class="compare-card">
-        <img src="images/after.jpg" alt="After restoration photo">
-        <figcaption>After</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container reveal">
-    <div class="section-heading center">
-      <div class="section-tag">Florida Service Area</div>
-      <h2>Check your zip code and watch the pin drop.</h2>
-      <p>Enter a zip code we serve to animate the Florida map and confirm coverage.</p>
-    </div>
-    <div class="service-area-card">
-      <div class="zip-checker">
-        <label for="zipInput">Enter your zip code</label>
-        <div class="zip-row">
-          <input id="zipInput" type="text" maxlength="5" placeholder="33301">
-          <button class="btn btn-primary" id="zipCheckBtn" type="button">Check Service Area</button>
-        </div>
-        <p id="zipResult" class="zip-result">We serve South Florida and surrounding areas. Enter a zip code to check availability.</p>
-      </div>
-      <div class="map-shell">
-        <div class="florida-wrap" id="floridaMapWrap">
-          <svg viewBox="0 0 260 420" class="florida-svg" aria-hidden="true">
-            <path id="floridaShape" d="M54 38l102 1 38 33-4 13-48-3-15 19 37 31-11 26 17 31-4 22 14 33-10 35 12 26-6 19 7 27-23 38-28 4-28-18-10-31-26-11-16-40 5-23-14-17 11-34 4-58-17-22 12-25-11-33 18-22-4-20z"/>
-          </svg>
-          <div class="map-pin" id="mapPin" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
-        </div>
-      </div>
+    <div class="banner-actions">
+      <a class="btn btn-primary" href="areas-served.html">Go to Areas Served</a>
+      <a class="btn btn-call cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">Call 24/7</span><span class="cta-shine" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -226,35 +153,48 @@
   <div class="container footer-grid">
     <div>
       <h3>Cinergy Restoration</h3>
-      <p>Fast, reliable help for water, fire, mold, storm damage, and reconstruction across South Florida.</p>
-      <div class="social-links footer-socials">
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-      </div>
+      <p>Fast, reliable help for water, fire, mold, storm damage, and reconstruction across Florida service areas.</p>
+      
+<div class="social-links footer-socials">
+  <a href="https://www.facebook.com/cinergyrestorations/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/cinergyrestoration/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/in/cinergyrestoration" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+
     </div>
     <div>
       <h4>Quick Links</h4>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="estimates.html">Estimate</a>
+      <a href="areas-served.html">Areas Served</a>
+      <span>Broward County</span>
+      <span>Palm Beach County</span>
+      <span>Dade County</span>
+      <span>Sarasota County</span>
       <a href="contact.html">Contact</a>
     </div>
     <div>
       <h4>Contact</h4>
       <a href="tel:9543977707">954-397-7707</a>
       <a href="mailto:dbirge@cbirestorations.com">dbirge@cbirestorations.com</a>
-      <span>South Florida</span>
+      <span>5054 Hiatus Rd, Sunrise FL 33351</span>
+      <span>FL Certification CGC0055114</span>
+      <span>MSR518314 Alabama State Certified Contractor 2500884</span>
     </div>
     <div>
       <h4>Emergency Service</h4>
-      <p>Available 24/7 for urgent property damage response and project follow-through.</p>
-      <a class="footer-cta cta-attention pulse-ring" href="estimates.html">Request Service</a>
+      <p>Available day or night for urgent property damage response and next-step guidance.</p>
+      <a class="footer-cta cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">Call 24/7</span><span class="cta-shine" aria-hidden="true"></span></a>
     </div>
   </div>
   <div class="footer-bottom">© 2026 Cinergy Restoration. All rights reserved.</div>
+
+  <div class="footer-badge-wrap">
+    <img src="images/iicrc-certified-firm.png" alt="IICRC Certified Firm" class="footer-badge">
+  </div>
 </footer>
 
-<a class="floating-call cta-attention pulse-ring" href="tel:9543977707" aria-label="Call now"><i class="fa-solid fa-phone"></i><span><span class="cta-text">Call Now</span><span class="cta-shine" aria-hidden="true"></span></span></a>
+<a class="floating-call cta-attention pulse-ring" href="tel:9543977707" aria-label="Call now"><i class="fa-solid fa-phone"></i><span class="cta-text">Call Now</span><span class="cta-shine" aria-hidden="true"></span></a>
 
 </body>
 </html>
