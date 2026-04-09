@@ -7,9 +7,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>  <link rel="icon" type="image/png" href="images/favicon.png">
-</head>
+<script defer src="script.js"></script></head>
 <body>
 
 <div class="topbar">
@@ -34,17 +34,16 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <div class="nav-dropdown">
-        <button class="nav-drop-toggle" aria-expanded="false">About <i class="fa-solid fa-angle-down"></i></button>
+        <a href="about.html" class="nav-link-main">About</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-label="Open About menu"><i class="fa-solid fa-angle-down"></i></button>
         <div class="nav-dropdown-menu">
-          <a href="about.html">About Us</a>
-          <a href="about.html#team">Leadership Team</a>
-          <a href="about.html#tpa">About TPA's</a>
+          <a href="about-tpa.html">About TPA</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button class="nav-drop-toggle" aria-expanded="false">Services <i class="fa-solid fa-angle-down"></i></button>
+        <a href="services.html" class="nav-link-main">Services</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-label="Open Services menu"><i class="fa-solid fa-angle-down"></i></button>
         <div class="nav-dropdown-menu">
-          <a href="services.html">All Services</a>
           <a href="services.html#catastrophic-response">24/7 Catastrophic Response</a>
           <a href="services.html#water-damage">Water Damage Restoration</a>
           <a href="services.html#fire-damage">Fire Damage Restoration</a>
@@ -62,13 +61,11 @@
       <a class="nav-cta cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">24/7 Call Now</span><span class="cta-shine" aria-hidden="true"></span></a>
     </nav>
 
-    
-<div class="header-socials">
-  <a href="https://www.facebook.com/cinergyrestorations/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-  <a href="https://www.instagram.com/cinergyrestoration/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/cinergyrestoration" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-</div>
-
+    <div class="header-socials">
+      <a href="https://www.facebook.com/cinergyrestorations/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/cinergyrestoration/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/cinergyrestoration" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
   </div>
 </header>
 
@@ -78,7 +75,7 @@
   <div class="container page-hero-content reveal">
     <div class="section-tag">Areas Served</div>
     <h1>Check whether your zip code is in our current Florida service area.</h1>
-    <p>Enter your zip code below to search coverage. If your zip is not listed yet, call us and we can confirm current availability.</p>
+    <p>Enter your zip code below to search coverage. If the zip is in our current service-area list, the map will glow green.</p>
   </div>
 </section>
 
@@ -88,38 +85,16 @@
       <div class="zip-checker">
         <label for="zipInput">Search by zip code</label>
         <div class="zip-row">
-          <input id="zipInput" type="text" maxlength="5" placeholder="32541">
+          <input id="zipInput" type="text" maxlength="5" placeholder="33351">
           <button class="btn btn-primary" id="zipCheckBtn" type="button">Search Service Area</button>
         </div>
-        <p id="zipResult" class="zip-result">Florida zip codes are loaded into this checker. Enter a 5-digit zip to search.</p>
-        <div class="zip-chip-wrap" id="zipChipWrap"></div>
+        <p id="zipResult" class="zip-result">Florida and Alabama zip codes are loaded into this checker. Enter a 5-digit zip code to search. The map will display a pop-up message showing whether we currently serve that area.</p>
       </div>
       <div class="map-shell">
-        <div class="florida-wrap" id="floridaMapWrap">
-          <svg viewBox="0 0 260 420" class="florida-svg" aria-hidden="true">
-            <path id="floridaShape" d="M54 38l102 1 38 33-4 13-48-3-15 19 37 31-11 26 17 31-4 22 14 33-10 35 12 26-6 19 7 27-23 38-28 4-28-18-10-31-26-11-16-40 5-23-14-17 11-34 4-58-17-22 12-25-11-33 18-22-4-20z"/>
-          </svg>
-          <div class="map-pin" id="mapPin" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="florida-wrap image-map-wrap" id="floridaMapWrap">
+          <img src="images/florida-service-map.png" alt="Florida service map outline" class="florida-map-image">
+          <div class="map-overlay-text" id="mapOverlayText">Search a zip code to check service availability.</div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="container reveal">
-    <div class="section-heading center">
-      <div class="section-tag">Coverage Notes</div>
-      <h2>Need help even if your zip is not listed?</h2>
-      <p>Call us directly. We can confirm active service coverage, emergency availability, and next steps for your location.</p>
-    </div>
-    <div class="banner-card">
-      <div>
-        <h3>Faster answers for urgent jobs</h3>
-        <p>Storm damage, water intrusions, mold concerns, tarping, and board-up needs often benefit from immediate confirmation by phone.</p>
-      </div>
-      <div class="banner-actions">
-        <a class="btn btn-call cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">Call 24/7</span><span class="cta-shine" aria-hidden="true"></span></a>
       </div>
     </div>
   </div>
@@ -131,17 +106,14 @@
     <div>
       <h3>Cinergy Restoration</h3>
       <p>Fast, reliable help for water, fire, mold, storm damage, and reconstruction across Florida service areas.</p>
-      
-<div class="social-links footer-socials">
-  <a href="https://www.facebook.com/cinergyrestorations/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-  <a href="https://www.instagram.com/cinergyrestoration/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/cinergyrestoration" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-</div>
-
+      <div class="social-links footer-socials">
+        <a href="https://www.facebook.com/cinergyrestorations/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/cinergyrestoration/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/cinergyrestoration" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
     </div>
     <div>
       <h4>Quick Links</h4>
-      <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="areas-served.html">Areas Served</a>
       <span>Broward County</span>
@@ -162,13 +134,12 @@
       <h4>Emergency Service</h4>
       <p>Available day or night for urgent property damage response and next-step guidance.</p>
       <a class="footer-cta cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">Call 24/7</span><span class="cta-shine" aria-hidden="true"></span></a>
+      <div class="footer-badge-wrap">
+        <img src="images/iicrc-certified-firm.png" alt="IICRC Certified Firm" class="footer-badge">
+      </div>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Cinergy Restoration. All rights reserved.</div>
-
-  <div class="footer-badge-wrap">
-    <img src="images/iicrc-certified-firm.png" alt="IICRC Certified Firm" class="footer-badge">
-  </div>
+  <div class="footer-bottom">© 2026 Cinergy Restoration. All rights reserved. Website by: Dominick Birge</div>
 </footer>
 
 <a class="floating-call cta-attention pulse-ring" href="tel:9543977707" aria-label="Call now"><i class="fa-solid fa-phone"></i><span class="cta-text">Call Now</span><span class="cta-shine" aria-hidden="true"></span></a>
