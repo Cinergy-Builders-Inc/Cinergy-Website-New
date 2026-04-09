@@ -56,3 +56,29 @@ You can replace these images in the `images` folder:
 - service-biohazard-cleanup.jpg
 - service-board-up.jpg
 - service-packout-services.jpg
+
+
+## Completed work gallery update
+- Added a homepage button under Project Photos:
+  - Our Jobs Completed Full Photo Gallery
+- Added `completed-work.html`
+- The completed work page uses one endless looping slideshow
+- Estimate page dropdown updated:
+  - Construction
+  - Remodeling
+- Updated service-page image captions with descriptive text
+
+
+Completed Work gallery image filenames:
+- images/job1.jpg
+- images/job2.jpg
+- images/job3.jpg
+- images/job4.jpg
+- images/job5.jpg
+- images/job6.jpg
+- images/job7.jpg
+- images/job8.jpg
+- images/job9.jpg
+- images/job10.jpg
+- images/job11.jpg
+- images/job12.jpg
