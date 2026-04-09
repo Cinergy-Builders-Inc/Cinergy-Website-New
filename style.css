@@ -975,3 +975,42 @@ textarea{min-height:160px;resize:vertical}
     grid-template-columns:1fr;
   }
 }
+
+
+/* Services overview layout to match requested screenshots */
+.services-overview-intro{
+  max-width: 860px;
+}
+.services-overview-intro p,
+.services-after-buttons p{
+  color: var(--muted);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.service-button-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  margin-top:28px;
+}
+.service-page-btn{
+  min-height:54px;
+  text-align:center;
+  white-space:nowrap;
+}
+.services-after-buttons{
+  margin-top:26px;
+  text-align:center;
+}
+.services-expect-grid{
+  align-items:start;
+}
+@media (max-width: 980px){
+  .service-page-btn{
+    width:100%;
+    white-space:normal;
+  }
+}
