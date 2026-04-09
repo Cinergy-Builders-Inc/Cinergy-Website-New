@@ -10,10 +10,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
-
 </head>
 <body>
-
 
 <div class="topbar">
   <div class="container topbar-inner">
@@ -28,7 +26,7 @@
       <img src="images/logo.jpg" alt="Cinergy Restoration logo" class="logo">
       <div class="brand-text">
         <strong>Cinergy Restoration</strong>
-        <span>Emergency Restoration & Reconstruction</span>
+        <span>Emergency Restoration &amp; Reconstruction</span>
       </div>
     </a>
 
@@ -37,22 +35,38 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <button class="nav-drop-toggle" aria-expanded="false">Services <i class="fa-solid fa-angle-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="services.html">All Services</a>
+          <a href="services.html#catastrophic-response">24/7 Catastrophic Response</a>
+          <a href="services.html#water-damage">Water Damage Restoration</a>
+          <a href="services.html#fire-damage">Fire Damage Restoration</a>
+          <a href="services.html#mold-remediation">Mold Remediation</a>
+          <a href="services.html#reconstruction">Reconstruction &amp; Renovation</a>
+          <a href="services.html#roof-tarp">Roof Tarp Services</a>
+          <a href="services.html#biohazard-cleanup">Biohazard Cleanup</a>
+          <a href="services.html#board-up">Board Up Services</a>
+          <a href="services.html#packout-services">Packout Services</a>
+        </div>
+      </div>
       <a href="estimates.html">Estimate</a>
       <a href="contact.html">Contact</a>
-      <a class="nav-cta" href="tel:9543977707">24/7 Call Now</a>
+      <a class="nav-cta cta-attention pulse-ring" href="tel:9543977707"><span class="cta-text">24/7 Call Now</span><span class="cta-shine" aria-hidden="true"></span></a>
     </nav>
+
     <div class="header-socials">
       <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
       <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
     </div>
-
   </div>
 </header>
 
 
-<section class="page-hero compact">
-  <div class="container">
+<section class="page-hero page-banner" style="--page-banner:url('images/about-team.jpg')">
+  <div class="page-banner-overlay"></div>
+  <div class="container page-hero-content reveal">
     <div class="section-tag">About Us</div>
     <h1>A restoration company built for responsive service and complete follow-through.</h1>
     <p>We combine emergency response, remediation, and reconstruction under one roof so clients can move through the process with less confusion and fewer delays.</p>
@@ -60,38 +74,80 @@
 </section>
 
 <section class="section">
-  <div class="container two-col">
-    <div>
-      <img class="rounded-image" src="images/about-team.jpg" alt="Cinergy Restoration team photo">
-    </div>
-    <div>
+  <div class="container split-intro">
+    <div class="stack reveal">
       <h2>In-house support from mitigation through rebuild.</h2>
       <p>Cinergy Restoration serves residential and commercial clients throughout South Florida with a practical, service-driven approach. Our work is designed to protect the property quickly, communicate clearly, and restore the space the right way.</p>
       <p>We understand that damage to a home or business can be disruptive and stressful. That is why our team focuses on fast response times, professional coordination, and quality workmanship from the first call through the final phase of reconstruction.</p>
+    </div>
+    <div class="feature-panel reveal">
+      <h3>Leadership &amp; Client Relations</h3>
+      <ul class="icon-list">
+        <li><i class="fa-solid fa-user-tie"></i><span>Executive oversight and operational follow-through</span></li>
+        <li><i class="fa-solid fa-handshake-angle"></i><span>Client-facing support and relationship building</span></li>
+        <li><i class="fa-solid fa-users-gear"></i><span>Team structure built for responsiveness and coordination</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <section class="section alt">
   <div class="container">
-    <div class="section-tag">Leadership Placeholders</div>
-    <h2 class="center">Update these photos and bios whenever you are ready.</h2>
-    <div class="team-grid">
-      <article class="team-card">
-        <img src="images/ceo.jpg" alt="CEO placeholder">
+    <div class="section-heading center reveal">
+      <div class="section-tag">Meet the Team</div>
+      <h2>Seven team cards with animated drop-in motion.</h2>
+      <p>The large team photo has been removed so the page feels more dynamic and individual headshots get the attention they deserve.</p>
+    </div>
+    <div class="team-grid team-grid-7">
+      <article class="team-card reveal drop-card delay-1">
+        <img src="images/ceo.jpg" alt="CEO portrait">
         <h3>CEO</h3>
-        <p>Leads company vision, standards, and strategic growth while helping ensure clients receive dependable service and strong outcomes.</p>
+        <p>Leads company vision, standards, and long-term strategy while helping keep service responsive and accountable.</p>
       </article>
-      <article class="team-card">
-        <img src="images/sales-manager.jpg" alt="Sales manager placeholder">
+      <article class="team-card reveal drop-card delay-2">
+        <img src="images/operations-manager.jpg" alt="Operations director portrait">
+        <h3>Operations Director</h3>
+        <p>Coordinates crews, scheduling, and project execution to keep work moving in a clean, organized way.</p>
+      </article>
+      <article class="team-card reveal drop-card delay-3">
+        <img src="images/sales-manager.jpg" alt="Director of sales portrait">
+        <h3>Director of Sales</h3>
+        <p>Supports new client relationships and helps create a smooth handoff from first inquiry to signed project.</p>
+      </article>
+      <article class="team-card reveal drop-card delay-4">
+        <img src="images/brand-ambassador.jpg" alt="Brand ambassador portrait">
+        <h3>Brand Ambassador</h3>
+        <p>Represents the Cinergy brand, strengthens community presence, and supports client-facing outreach initiatives.</p>
+      </article>
+      <article class="team-card reveal drop-card delay-5">
+        <img src="images/program-director.jpg" alt="Program director portrait">
+        <h3>Program Director</h3>
+        <p>Helps guide program development, process consistency, and internal coordination across key service areas.</p>
+      </article>
+      <article class="team-card reveal drop-card delay-6">
+        <img src="images/sales-manager-2.jpg" alt="Sales manager portrait">
         <h3>Sales Manager</h3>
-        <p>Supports new client relationships, helps scope opportunities, and keeps communication clear from the first call to project start.</p>
+        <p>Supports estimate intake, relationship building, and a better client experience from first contact to project launch.</p>
       </article>
-      <article class="team-card">
-        <img src="images/operations-manager.jpg" alt="Operations manager placeholder">
-        <h3>Operations Manager</h3>
-        <p>Coordinates field teams, timelines, and production standards to keep projects moving efficiently and professionally.</p>
+      <article class="team-card reveal drop-card delay-7">
+        <img src="images/sales-manager-3.jpg" alt="Sales manager portrait">
+        <h3>Sales Manager</h3>
+        <p>Works with clients and referral partners to keep communication clear and opportunities moving forward.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container banner-card reveal">
+    <div>
+      <div class="section-tag">Call the Team</div>
+      <h2>Need immediate help or want to talk through a project?</h2>
+      <p>Use the estimate page or call directly for emergency support.</p>
+    </div>
+    <div class="banner-actions">
+      <a class="btn btn-primary" href="estimates.html">Request Estimate</a>
+      <a class="btn btn-secondary" href="tel:9543977707"><span class="cta-text">Call 24/7</span><span class="cta-shine" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -101,18 +157,16 @@
   <div class="container footer-grid">
     <div>
       <h3>Cinergy Restoration</h3>
-      <p>24/7 emergency disaster restoration services for homeowners, property managers, and commercial properties across South Florida.</p>
-      
-<div class="social-links">
-  <a href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-  <a href="#" aria-label="X" title="X"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="#" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-</div>
-
+      <p>Fast, reliable help for water, fire, mold, storm damage, and reconstruction across South Florida.</p>
+      <div class="social-links footer-socials">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
     </div>
     <div>
       <h4>Quick Links</h4>
       <a href="about.html">About</a>
+      <a href="services.html">Services</a>
       <a href="estimates.html">Estimate</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -123,20 +177,15 @@
       <span>South Florida</span>
     </div>
     <div>
-      <h4>Follow</h4>
-      
-<div class="social-links">
-  <a href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-  <a href="#" aria-label="X" title="X"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="#" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-</div>
-
+      <h4>Emergency Service</h4>
+      <p>Available 24/7 for urgent property damage response and project follow-through.</p>
+      <a class="footer-cta cta-attention pulse-ring" href="estimates.html">Request Service</a>
     </div>
   </div>
   <div class="footer-bottom">© 2026 Cinergy Restoration. All rights reserved.</div>
 </footer>
 
-<a class="floating-call" href="tel:9543977707" aria-label="Call now">Call Now</a>
+<a class="floating-call cta-attention pulse-ring" href="tel:9543977707" aria-label="Call now"><i class="fa-solid fa-phone"></i><span><span class="cta-text">Call Now</span><span class="cta-shine" aria-hidden="true"></span></span></a>
 
 </body>
 </html>
