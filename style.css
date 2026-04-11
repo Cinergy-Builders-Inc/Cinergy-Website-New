@@ -1691,3 +1691,82 @@ textarea{min-height:160px;resize:vertical}
     flex-direction:column !important;
   }
 }
+
+
+/* Better visibility for all individual service page hero photos */
+.page-hero.page-banner,
+.service-page-hero,
+.page-banner{
+    position: relative;
+    background-size: cover !important;
+    background-position: center center !important;
+    overflow: hidden;
+}
+
+.page-hero.page-banner::before,
+.service-page-hero::before,
+.page-banner::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,.45) 0%,
+        rgba(0,0,0,.20) 45%,
+        rgba(0,0,0,.15) 100%
+    );
+    z-index: 1;
+}
+
+.page-hero.page-banner > *,
+.service-page-hero > *,
+.page-banner > *{
+    position: relative;
+    z-index: 2;
+}
+
+/* Make the hero card slightly lighter so the image shows through more */
+.page-banner .glass-card,
+.page-banner .hero-card,
+.page-banner .hero-content{
+    background: rgba(7,16,12,.42) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(75,255,120,.18) !important;
+}
+
+/* Specific fixes for packout and roof tarp pages so the photos are less zoomed */
+body.packout-page .page-banner,
+body.packout-services-page .page-banner,
+.packout-hero,
+.page-banner.packout{
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-color: #06110b !important;
+}
+
+body.roof-tarp-page .page-banner,
+body.tarp-page .page-banner,
+.roof-tarp-hero,
+.page-banner.roof-tarp{
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-color: #06110b !important;
+}
+
+/* Mobile keeps the images more visible */
+@media (max-width: 900px){
+    .page-hero.page-banner,
+    .service-page-hero,
+    .page-banner{
+        background-position: center top !important;
+    }
+
+    body.packout-page .page-banner,
+    body.packout-services-page .page-banner,
+    body.roof-tarp-page .page-banner,
+    body.tarp-page .page-banner{
+        background-size: 100% auto !important;
+    }
+}
