@@ -1,4 +1,74 @@
 
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.main-nav');
+if (toggle && nav) {
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const open = nav.classList.toggle('open');
+    document.body.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+}
+
+
+// Clean dropdown behavior
+function closeSiteDropdowns() {
+  document.querySelectorAll('.nav-dropdown.open').forEach((drop) => {
+    drop.classList.remove('open');
+    const trigger = drop.querySelector('.nav-main-toggle, .nav-drop-toggle');
+    if (trigger) trigger.setAttribute('aria-expanded', 'false');
+  });
+}
+
+document.querySelectorAll('.nav-main-toggle, .nav-drop-toggle').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const drop = btn.closest('.nav-dropdown');
+    const shouldOpen = !drop.classList.contains('open');
+
+    if (window.innerWidth <= 980) {
+      closeSiteDropdowns();
+      if (shouldOpen) {
+        drop.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      return;
+    }
+
+    closeSiteDropdowns();
+    if (shouldOpen) {
+      drop.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+document.querySelectorAll('.nav-dropdown-menu a').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeSiteDropdowns();
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      document.body.classList.remove('nav-open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.nav-dropdown') && !e.target.closest('.menu-toggle') && !e.target.closest('.main-nav')) {
+    closeSiteDropdowns();
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      document.body.classList.remove('nav-open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+});
+
+
 document.querySelectorAll('.slider').forEach((slider) => {
   const slides = slider.querySelectorAll('.slide');
   let slideIndex = 0;
@@ -10,71 +80,6 @@ document.querySelectorAll('.slider').forEach((slider) => {
     }, 3500);
   }
 });
-
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.main-nav');
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    document.body.classList.toggle('nav-open', open);
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-}
-
-
-// Header dropdown behavior
-function closeAllDropdowns() {
-  document.querySelectorAll('.nav-dropdown.open').forEach((item) => {
-    item.classList.remove('open');
-    const trigger = item.querySelector('.nav-drop-toggle, .nav-main-toggle');
-    if (trigger) trigger.setAttribute('aria-expanded', 'false');
-  });
-}
-
-document.querySelectorAll('.nav-drop-toggle, .nav-main-toggle').forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    const wrap = btn.closest('.nav-dropdown');
-    const isMobile = window.innerWidth <= 980;
-
-    if (!isMobile) {
-      e.preventDefault();
-      e.stopPropagation();
-      const shouldOpen = !wrap.classList.contains('open');
-      closeAllDropdowns();
-      if (shouldOpen) {
-        wrap.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-      return;
-    }
-
-    e.preventDefault();
-    e.stopPropagation();
-    const shouldOpen = !wrap.classList.contains('open');
-    closeAllDropdowns();
-    if (shouldOpen) {
-      wrap.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  });
-});
-
-document.querySelectorAll('.nav-dropdown-menu a').forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
-});
-
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.nav-dropdown')) {
-    closeAllDropdowns();
-  }
-});
-
-
-
-
-
 
 
 
