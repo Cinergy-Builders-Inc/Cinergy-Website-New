@@ -1,3 +1,14 @@
+document.querySelectorAll('.slider').forEach((slider) => {
+  const slides = slider.querySelectorAll('.slide');
+  let slideIndex = 0;
+  if (slides.length) {
+    setInterval(() => {
+      slides.forEach((slide) => slide.classList.remove('active'));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }, 3500);
+  }
+});
 
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
@@ -11,8 +22,7 @@ if (toggle && nav) {
   });
 }
 
-
-// Clean dropdown behavior
+// Dropdown navigation behavior
 function closeSiteDropdowns() {
   document.querySelectorAll('.nav-dropdown.open').forEach((drop) => {
     drop.classList.remove('open');
@@ -27,16 +37,6 @@ document.querySelectorAll('.nav-main-toggle, .nav-drop-toggle').forEach((btn) =>
     e.stopPropagation();
     const drop = btn.closest('.nav-dropdown');
     const shouldOpen = !drop.classList.contains('open');
-
-    if (window.innerWidth <= 980) {
-      closeSiteDropdowns();
-      if (shouldOpen) {
-        drop.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-      return;
-    }
-
     closeSiteDropdowns();
     if (shouldOpen) {
       drop.classList.add('open');
@@ -48,40 +48,14 @@ document.querySelectorAll('.nav-main-toggle, .nav-drop-toggle').forEach((btn) =>
 document.querySelectorAll('.nav-dropdown-menu a').forEach((link) => {
   link.addEventListener('click', (e) => {
     e.stopPropagation();
-    closeSiteDropdowns();
-    if (nav && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      document.body.classList.remove('nav-open');
-      if (toggle) toggle.setAttribute('aria-expanded', 'false');
-    }
   });
 });
 
 document.addEventListener('click', (e) => {
-  if (!e.target.closest('.nav-dropdown') && !e.target.closest('.menu-toggle') && !e.target.closest('.main-nav')) {
+  if (!e.target.closest('.nav-dropdown') && !e.target.closest('.menu-toggle')) {
     closeSiteDropdowns();
-    if (nav && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      document.body.classList.remove('nav-open');
-      if (toggle) toggle.setAttribute('aria-expanded', 'false');
-    }
   }
 });
-
-
-document.querySelectorAll('.slider').forEach((slider) => {
-  const slides = slider.querySelectorAll('.slide');
-  let slideIndex = 0;
-  if (slides.length) {
-    setInterval(() => {
-      slides.forEach((slide) => slide.classList.remove('active'));
-      slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].classList.add('active');
-    }, 3500);
-  }
-});
-
-
 
 const revealItems = document.querySelectorAll('.reveal');
 if (revealItems.length && 'IntersectionObserver' in window) {
@@ -750,8 +724,6 @@ if (zipInput) zipInput.addEventListener('keydown', (e) => {
     runZipCheck();
   }
 });
-
-
 
 // Estimate form AJAX submit with in-page thank-you message
 const estimateForm = document.getElementById('estimateForm');
