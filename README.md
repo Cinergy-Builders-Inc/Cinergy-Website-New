@@ -82,3 +82,77 @@ Completed Work gallery image filenames:
 - images/job10.jpg
 - images/job11.jpg
 - images/job12.jpg
+
+## Security hardening added
+- Added `vercel.json` with security headers:
+  - Content-Security-Policy
+  - X-Frame-Options
+  - X-Content-Type-Options
+  - Referrer-Policy
+  - Permissions-Policy
+- Tightened estimate form field limits and autocomplete attributes
+- Standardized external links that open in new tabs with `rel="noopener noreferrer"`
+
+Note:
+This is front-end hardening for a static site. Full server-side security still depends on your hosting platform, form provider, and any backend services you add later.
+
+
+## Recommended next security steps
+1. Add anti-spam protection to the estimate form
+   - Use Web3Forms spam protection options
+   - Add rate limiting or captcha if spam starts coming through
+
+2. Add uptime monitoring
+   - Use a service like UptimeRobot or Better Stack
+   - Get alerts if the website goes down
+
+3. Add analytics and error monitoring
+   - Track form issues, broken links, and user drop-off points
+   - Useful later if you add more pages or features
+
+4. Protect any future admin pages
+   - Do not leave private dashboards or hidden pages public
+   - Put admin tools behind authentication
+
+5. Secure future uploads and databases
+   - If you later add photo uploads or a database, validate files, sanitize inputs, and restrict permissions
+
+6. Keep dependencies and embeds updated
+   - Review Font Awesome, CDN links, and third-party tools occasionally
+   - Remove anything you no longer use
+
+
+## What was added for security
+The site was hardened on the front end with these protections:
+
+- **Content Security Policy (CSP)** in `vercel.json`
+  - Limits where scripts, styles, fonts, images, and form submissions can load from
+  - Helps reduce the risk of injected scripts or unsafe third-party content
+
+- **X-Frame-Options: DENY**
+  - Helps prevent clickjacking by blocking the site from being embedded in another page or iframe
+
+- **X-Content-Type-Options: nosniff**
+  - Helps stop browsers from guessing the wrong file type for scripts and styles
+
+- **Referrer-Policy**
+  - Reduces how much referral information is shared when visitors leave your site
+
+- **Permissions-Policy**
+  - Restricts access to sensitive browser features like camera, microphone, and geolocation
+
+- **Estimate form hardening**
+  - Added tighter field limits, better autocomplete settings, and safer basic input handling on the front end
+
+- **Safer external links**
+  - Links that open in a new tab use `rel="noopener noreferrer"` to reduce tab hijacking risks
+
+### Important note
+These changes improve the security of a static front-end website, but they do **not** replace:
+- backend security
+- database security
+- upload security
+- login/admin security
+- form spam/rate limiting
+
+Those would be the next layer if you add more advanced features later.
