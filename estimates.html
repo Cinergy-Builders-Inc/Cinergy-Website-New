@@ -41,21 +41,20 @@
 </div>
 </div>
       
-      <div class="nav-dropdown">
-        <a href="services.html" class="nav-link-main">Services</a>
-        <button class="nav-drop-toggle" aria-expanded="false" aria-label="Open Services menu"><i class="fa-solid fa-angle-down"></i></button>
-        <div class="nav-dropdown-menu">
-          <a href="catastrophic-response.html">24/7 Catastrophic Response</a>
-          <a href="water-damage.html">Water Damage Restoration</a>
-          <a href="fire-damage.html">Fire Damage Restoration</a>
-          <a href="mold-remediation.html">Mold Remediation</a>
-          <a href="construction.html">Construction and Remodeling</a>
-          <a href="roof-tarp.html">Roof Tarp Services</a>
-          <a href="biohazard-cleanup.html">Biohazard Cleanup</a>
-          <a href="board-up.html">Board Up Services</a>
-          <a href="packout-services.html">Packout Services</a>
-        </div>
-      </div>
+      <div class="nav-dropdown nav-dropdown-services">
+<button type="button" class="nav-link-main nav-main-toggle services-trigger" aria-expanded="false" aria-label="Open Services menu">Services <i class="fa-solid fa-angle-down"></i></button>
+<div class="nav-dropdown-menu">
+<a href="catastrophic-response.html">24/7 Catastrophic Response</a>
+<a href="water-damage.html">Water Damage Restoration</a>
+<a href="fire-damage.html">Fire Damage Restoration</a>
+<a href="mold-remediation.html">Mold Remediation</a>
+<a href="construction.html">Construction and Remodeling</a>
+<a href="roof-tarp.html">Roof Tarp Services</a>
+<a href="biohazard-cleanup.html">Biohazard Cleanup</a>
+<a href="board-up.html">Board Up Services</a>
+<a href="packout-services.html">Packout Services</a>
+</div>
+</div>
 
       <a href="areas-served.html">Areas Served</a>
       <a href="estimates.html">Estimate</a>
@@ -95,16 +94,16 @@
       <input type="checkbox" name="botcheck" class="hidden-field">
 
       <label>Full Name
-        <input type="text" name="name" placeholder="Your full name" required>
+        <input type="text" name="name" placeholder="Your full name" minlength="2" maxlength="80" autocomplete="name" required>
       </label>
       <label>Property Address
-        <input type="text" name="address" placeholder="Street address, city, state, zip" required>
+        <input type="text" name="address" placeholder="Street address, city, state, zip" minlength="5" maxlength="160" autocomplete="street-address" required>
       </label>
       <label>Phone Number
-        <input type="tel" name="phone" placeholder="(555) 555-5555" required>
+        <input type="tel" name="phone" placeholder="(555) 555-5555" inputmode="tel" autocomplete="tel" minlength="10" maxlength="20" required>
       </label>
       <label>Email Address
-        <input type="email" name="email" placeholder="you@example.com" required>
+        <input type="email" name="email" placeholder="you@example.com" maxlength="120" autocomplete="email" required>
       </label>
       <label>Service Needed
         <select name="service">
@@ -122,7 +121,7 @@
         </select>
       </label>
       <label>Project Details
-        <textarea name="message" placeholder="Tell us what happened, where the property is located, and anything else we should know." required></textarea>
+        <textarea name="message" placeholder="Tell us what happened, where the property is located, and anything else we should know." minlength="10" maxlength="3000" required></textarea>
       </label>
       <button type="submit" class="btn btn-primary full">Send Request</button>
       <div id="formStatus" class="form-status" aria-live="polite"></div>
