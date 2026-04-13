@@ -1,0 +1,22 @@
+PERFORMANCE + MOBILE NOTES
+
+What is already added in the site:
+- Lazy loading for below-the-fold images
+- Async image decoding where possible
+- Single font family setup
+- Minimal script loading with deferred JS
+
+What to do when uploading real images:
+1. Compress each image before uploading.
+2. Keep hero images sized reasonably instead of using huge originals.
+3. Use WebP when possible for project and gallery images.
+4. Test on your phone after each image swap.
+5. Run Lighthouse or PageSpeed after uploads to catch oversized images.
+
+Best filenames to keep consistent:
+- before-1.jpg / after-1.jpg
+- before-2.jpg / after-2.jpg
+- before-3.jpg / after-3.jpg
+
+Important:
+The biggest speed win will come from your image sizes, not from hosting.
