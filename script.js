@@ -801,3 +801,27 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
     }
   });
 });
+
+
+
+
+document.querySelectorAll('[data-before-after-card]').forEach((card) => {
+  const range = card.querySelector('.before-after-range');
+  const afterClip = card.querySelector('.after-clip');
+  const handle = card.querySelector('.before-after-handle');
+
+  if (!range || !afterClip || !handle) return;
+
+  const syncBeforeAfterCard = () => {
+    const value = `${range.value}%`;
+    afterClip.style.width = value;
+    handle.style.left = value;
+
+    const isAfterActive = Number(range.value) >= 50;
+    card.classList.toggle('after-highlighted', isAfterActive);
+    afterClip.classList.toggle('is-active', isAfterActive);
+  };
+
+  range.addEventListener('input', syncBeforeAfterCard);
+  syncBeforeAfterCard();
+});
