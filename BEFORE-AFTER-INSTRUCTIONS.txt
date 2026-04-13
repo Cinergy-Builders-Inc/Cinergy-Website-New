@@ -1,0 +1,18 @@
+BEFORE / AFTER PHOTO SETUP
+
+The homepage is ready for 3 before-and-after sliders.
+
+Just place your photos in the images folder using these filenames:
+
+before-1.jpg
+after-1.jpg
+
+before-2.jpg
+after-2.jpg
+
+before-3.jpg
+after-3.jpg
+
+Then refresh the site.
+
+You do not need to change any code unless you want to add more than 3 sliders.
