@@ -1,0 +1,1 @@
+SEO updates added automatically. Before launch on your final custom domain, update BASE_URL references in sitemap.xml, robots.txt, and canonical tags if you move off the Vercel preview domain.
