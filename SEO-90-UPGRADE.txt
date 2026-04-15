@@ -1,0 +1,34 @@
+SEO 90+ Upgrade Package
+
+Added recommendations:
+- Create dedicated city pages:
+  - fort-lauderdale-water-damage.html
+  - sunrise-mold-remediation.html
+  - hollywood-fire-damage.html
+  - davie-water-damage.html
+  - pembroke-pines-restoration.html
+
+- Add 400-700 words of unique content to each service page.
+- Add FAQ sections with FAQ schema.
+- Add Google review snippets.
+- Convert hero images to WebP.
+- Submit sitemap.xml to Google Search Console.
+
+Suggested FAQ schema example:
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"How fast can you respond to water damage in Fort Lauderdale?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Cinergy Restoration provides 24/7 emergency response and can typically arrive quickly in Fort Lauderdale and Broward County."
+      }
+    }
+  ]
+}
+</script>
