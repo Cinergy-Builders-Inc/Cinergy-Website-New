@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cinergy-restoration.vercel.app/sitemap.xml
