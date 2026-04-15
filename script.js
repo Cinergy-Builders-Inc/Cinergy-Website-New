@@ -825,3 +825,68 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
   range.addEventListener('input', syncBeforeAfterCard);
   syncBeforeAfterCard();
 });
+
+
+// Completed work popup gallery
+(() => {
+  const workLightbox = document.getElementById('workLightbox');
+  if (!workLightbox) return;
+
+  const workCards = Array.from(document.querySelectorAll('[data-lightbox-src]'));
+  const workImage = workLightbox.querySelector('.lightbox-image');
+  const workClose = workLightbox.querySelector('.lightbox-close');
+  const workPrev = workLightbox.querySelector('.lightbox-prev');
+  const workNext = workLightbox.querySelector('.lightbox-next');
+  const workCounter = workLightbox.querySelector('.lightbox-counter');
+  let currentIndex = 0;
+
+  function renderWorkLightbox() {
+    if (!workCards.length) return;
+    const current = workCards[currentIndex];
+    workImage.src = current.getAttribute('data-lightbox-src');
+    workImage.alt = current.getAttribute('aria-label') || 'Expanded completed project photo';
+    if (workCounter) workCounter.textContent = `${currentIndex + 1} / ${workCards.length}`;
+  }
+
+  function openWorkLightbox(index) {
+    currentIndex = index;
+    renderWorkLightbox();
+    workLightbox.classList.add('open');
+    workLightbox.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeWorkLightbox() {
+    workLightbox.classList.remove('open');
+    workLightbox.setAttribute('aria-hidden', 'true');
+    workImage.src = '';
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + workCards.length) % workCards.length;
+    renderWorkLightbox();
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % workCards.length;
+    renderWorkLightbox();
+  }
+
+  workCards.forEach((card, index) => {
+    card.addEventListener('click', () => openWorkLightbox(index));
+  });
+
+  workClose?.addEventListener('click', closeWorkLightbox);
+  workPrev?.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+  workNext?.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+
+  workLightbox.addEventListener('click', (e) => {
+    if (e.target === workLightbox) closeWorkLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!workLightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeWorkLightbox();
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+})();
