@@ -101,6 +101,11 @@ a{text-decoration:none;color:inherit}
 .hero p,.page-hero p{color:var(--muted);font-size:clamp(17px,2vw,20px);max-width:650px}
 .hero-actions,.banner-actions,.zip-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
 
+.biohazard-hero img {
+  object-fit: cover;
+  object-position: center 10%;
+}
+
 .btn{
   display:inline-flex;justify-content:center;align-items:center;gap:10px;border:none;cursor:pointer;font:inherit;font-weight:800;
   border-radius:16px;padding:15px 22px;transition:transform .18s ease, box-shadow .18s ease, background .18s ease
