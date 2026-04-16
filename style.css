@@ -4954,3 +4954,156 @@ img{
   white-space: nowrap;
   border: 0;
 }
+
+
+/* April 2026 update: crisper service heroes, dedicated completed work hero, larger before/after */
+.page-hero.page-banner:not(.about-full-fit):not(.about-tpa-full-fit):not(.areas-full-fit):not(.estimates-full-fit):not(.contact-full-fit):not(.completed-work-full-fit){
+  min-height: 500px !important;
+  background-size: cover !important;
+  background-position: center 34% !important;
+}
+
+.page-banner-overlay{
+  background:
+    linear-gradient(90deg, rgba(4,8,6,.52) 0%, rgba(4,8,6,.26) 42%, rgba(4,8,6,.14) 100%) !important,
+    linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.12)) !important;
+}
+
+.container.page-hero-content{
+  background: rgba(8, 16, 12, 0.10) !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.10) !important;
+}
+
+.completed-work-full-fit{
+  min-height: 520px !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: #091009 !important;
+}
+
+.before-after-shell{
+  max-width: 1320px !important;
+}
+.before-after-gallery{
+  grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+  gap: 24px !important;
+}
+.before-after-card{
+  padding: 24px !important;
+}
+.before-after-frame{
+  aspect-ratio: 4 / 3 !important;
+  min-height: 340px !important;
+}
+.before-after-note{
+  font-size: 1rem !important;
+}
+
+@media (max-width: 1200px){
+  .before-after-gallery{
+    grid-template-columns: 1fr !important;
+  }
+  .before-after-frame{
+    min-height: 280px !important;
+  }
+  .page-hero.page-banner:not(.about-full-fit):not(.about-tpa-full-fit):not(.areas-full-fit):not(.estimates-full-fit):not(.contact-full-fit):not(.completed-work-full-fit){
+    min-height: 400px !important;
+    background-position: center center !important;
+  }
+  .completed-work-full-fit{
+    min-height: 360px !important;
+    background-size: cover !important;
+  }
+}
+
+
+/* April 2026 final polish: homepage CTA copy, completed work hero, bigger before/after */
+.completed-work-full-fit .page-banner-overlay{
+  background: linear-gradient(90deg, rgba(5,10,7,.22) 0%, rgba(5,10,7,.10) 42%, rgba(5,10,7,.12) 100%) !important;
+}
+.completed-work-full-fit .service-hero-label{
+  left: 34px;
+  bottom: 28px;
+}
+.completed-work-full-fit .page-hero-content{
+  display:none !important;
+}
+
+/* Keep service heroes crisp and less muddy */
+.page-hero.page-banner:not(.about-full-fit):not(.about-tpa-full-fit):not(.areas-full-fit):not(.estimates-full-fit):not(.contact-full-fit):not(.completed-work-full-fit){
+  background-size: cover !important;
+  background-position: center center !important;
+  min-height: 500px !important;
+}
+.page-hero.page-banner:not(.about-full-fit):not(.about-tpa-full-fit):not(.areas-full-fit):not(.estimates-full-fit):not(.contact-full-fit):not(.completed-work-full-fit)::before{
+  background: linear-gradient(90deg, rgba(0,0,0,.30) 0%, rgba(0,0,0,.16) 45%, rgba(0,0,0,.12) 100%) !important;
+}
+
+/* Restore larger original-feel before/after cards */
+.before-after-shell{
+  max-width: 1500px !important;
+}
+.before-after-gallery{
+  grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+  gap: 20px !important;
+}
+.before-after-card{
+  padding: 14px !important;
+}
+.before-after-frame{
+  aspect-ratio: 16 / 9 !important;
+  min-height: 0 !important;
+}
+.before-after-range{
+  margin-top: 14px !important;
+}
+.before-after-note{
+  margin-top: 12px !important;
+}
+@media (max-width: 1200px){
+  .before-after-gallery{
+    grid-template-columns: 1fr !important;
+  }
+  .completed-work-full-fit .service-hero-label{
+    left: 14px;
+    right: 14px;
+    bottom: 18px;
+  }
+}
+
+
+/* April 16 targeted hero fixes */
+.hero-water-damage{
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat:no-repeat !important;
+  background-color:#0a0f0b !important;
+  min-height: 500px !important;
+}
+.hero-biohazard{
+  background-size: auto 100% !important;
+  background-position: left center !important;
+  background-repeat:no-repeat !important;
+  background-color:#0a0f0b !important;
+  min-height: 500px !important;
+}
+@media (max-width: 980px){
+  .hero-water-damage,
+  .hero-biohazard{
+    background-size: cover !important;
+    background-position: center center !important;
+    min-height: 360px !important;
+  }
+}
+.completed-card span{
+  display:block !important;
+  color:#f4f7f4 !important;
+  background:rgba(5,10,7,.92) !important;
+  font-weight:700 !important;
+  font-size:1rem !important;
+  line-height:1.35 !important;
+  min-height:60px !important;
+}
