@@ -1,0 +1,30 @@
+
+/* Sharper Biohazard Hero */
+.biohazard-hero,
+.service-hero.biohazard-cleanup {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+}
+
+.biohazard-hero::before,
+.service-hero.biohazard-cleanup::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('images/hero-biohazard.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center 20%;
+  filter: none !important;
+  transform: none !important;
+}
+
+/* On larger screens, zoom out slightly more so the image stays sharper */
+@media (min-width: 1200px) {
+  .biohazard-hero::before,
+  .service-hero.biohazard-cleanup::before {
+    background-size: 95% auto;
+    background-position: center 18%;
+  }
+}
