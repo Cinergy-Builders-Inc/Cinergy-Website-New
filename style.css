@@ -4965,7 +4965,7 @@ img{
 
 .page-banner-overlay{
   background:
-    linear-gradient(90deg, rgba(4,8,6,.52) 0%, rgba(4,8,6,.26) 42%, rgba(4,8,6,.14) 100%) !important,
+    linear-gradient(90deg, rgba(4,8,6,.52) 0%, rgba(4,8,6,.26) 42%, rgba(4,8,6,.14) 100%),
     linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.12)) !important;
 }
 
