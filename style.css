@@ -5155,3 +5155,102 @@ body.service-page .page-banner{
     background-position: center center !important;
   }
 }
+
+/* === MOBILE + CSS CLEANUP PATCH === */
+
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Consistent hero sizing across pages */
+.page-hero,
+.service-hero,
+.about-hero,
+.contact-hero {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 80px;
+}
+
+.page-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Cleaner transparent hero card */
+.page-hero-content,
+.service-hero-content {
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 32px;
+}
+
+/* Mobile nav fixes */
+@media (max-width: 768px) {
+  .nav-links,
+  .mobile-menu {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 12px;
+    margin-top: 8px;
+  }
+
+  .page-hero,
+  .service-hero,
+  .about-hero,
+  .contact-hero {
+    min-height: 320px;
+    padding: 100px 16px 56px;
+  }
+
+  .page-hero-content,
+  .service-hero-content {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .page-hero-content h1,
+  .service-hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .page-hero-content p,
+  .service-hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn,
+  .button,
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card-grid,
+  .services-grid,
+  .gallery-grid,
+  .review-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .card,
+  .service-card,
+  .review-card {
+    padding: 20px;
+  }
+}
