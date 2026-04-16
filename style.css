@@ -5254,3 +5254,54 @@ html, body {
     padding: 20px;
   }
 }
+
+
+/* Construction hero image */
+.page-hero {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  background: #06120b;
+}
+
+.page-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+}
+
+/* Biohazard hero image - keep the worker's head visible */
+.biohazard-hero,
+.page-hero.biohazard {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  background: #06120b;
+}
+
+.biohazard-hero .page-hero-image img,
+.page-hero.biohazard .page-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 24% 34%;
+}
+
+.biohazard-hero::after,
+.page-hero.biohazard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(4, 12, 7, 0.25),
+    rgba(4, 12, 7, 0.45)
+  );
+  pointer-events: none;
+}
+
+:root {
+  --accent-green: #2CFF38;
+  --accent-green-dark: #18b326;
+}
