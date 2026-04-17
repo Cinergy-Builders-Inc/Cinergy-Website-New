@@ -5316,3 +5316,69 @@ html, body {
   box-shadow: none !important;
   border: none !important;
 }
+
+
+/* April 17 2026 performance + brighter hero pass */
+.hero-bg{
+  transform:none !important;
+  filter:saturate(1.02) contrast(1.03) brightness(1.08) !important;
+}
+.hero-overlay{
+  background:
+    linear-gradient(90deg, rgba(3,8,4,.46) 0%, rgba(4,8,4,.24) 44%, rgba(4,8,4,.10) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.12)) !important;
+}
+.page-banner-overlay,
+.page-hero.page-banner::before,
+.service-page-hero::before,
+.page-banner::before{
+  background: linear-gradient(90deg, rgba(0,0,0,.22) 0%, rgba(0,0,0,.10) 45%, rgba(0,0,0,.06) 100%) !important;
+}
+.hero-panel,
+.page-hero-content,
+.page-banner .page-hero-content{
+  background: rgba(6,10,7,.12) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+}
+.page-hero.page-banner,
+.service-page-hero,
+.page-banner{
+  isolation:isolate;
+}
+.about-full-fit,
+.about-tpa-full-fit,
+.areas-full-fit,
+.estimates-full-fit,
+.contact-full-fit{
+  background-color:#050805 !important;
+}
+
+
+/* HERO IMAGE BRIGHTNESS UPDATE */
+.hero::before,
+.page-hero::before,
+.service-hero::before,
+.hero-banner::before {
+  background: linear-gradient(
+    rgba(0,0,0,0.18),
+    rgba(0,0,0,0.18)
+  ) !important;
+}
+
+.hero img,
+.page-hero img,
+.service-hero img,
+.hero-banner img,
+.hero-background,
+.hero-bg,
+.page-hero-bg {
+  filter: brightness(1.28) contrast(1.05) saturate(1.05) !important;
+}
+
+.hero-content,
+.page-hero-content,
+.service-hero-content {
+  position: relative;
+  z-index: 2;
+}
