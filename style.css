@@ -1726,7 +1726,7 @@ textarea{min-height:160px;resize:vertical}
 .page-hero.page-banner > *,
 .service-page-hero > *,
 .page-banner > *{
-    position: left;
+    position: relative;
     z-index: 2;
 }
 
@@ -5258,4 +5258,36 @@ html, body {
   .review-card {
     padding: 20px;
   }
+}
+
+/* April 2026 hero brightness fix for About/About TPA/Areas Served/Estimate/Contact */
+.page-hero.page-banner.about-full-fit .page-banner-overlay,
+.page-hero.page-banner.about-tpa-full-fit .page-banner-overlay,
+.page-hero.page-banner.areas-full-fit .page-banner-overlay,
+.page-hero.page-banner.estimates-full-fit .page-banner-overlay,
+.page-hero.page-banner.contact-full-fit .page-banner-overlay{
+  background:
+    linear-gradient(90deg,
+      rgba(4,8,6,.22) 0%,
+      rgba(4,8,6,.10) 45%,
+      rgba(4,8,6,.06) 100%
+    ) !important;
+}
+
+.page-hero.page-banner.about-full-fit .page-hero-content,
+.page-hero.page-banner.about-tpa-full-fit .page-hero-content,
+.page-hero.page-banner.areas-full-fit .page-hero-content,
+.page-hero.page-banner.estimates-full-fit .page-hero-content,
+.page-hero.page-banner.contact-full-fit .page-hero-content{
+  background: rgba(8,16,12,.10) !important;
+  border: 1px solid rgba(76,255,71,.08) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08) !important;
+}
+
+.page-hero.page-banner.about-full-fit,
+.page-hero.page-banner.about-tpa-full-fit,
+.page-hero.page-banner.areas-full-fit,
+.page-hero.page-banner.estimates-full-fit,
+.page-hero.page-banner.contact-full-fit{
+  background-color: transparent !important;
 }
