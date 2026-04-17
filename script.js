@@ -886,3 +886,55 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
     if (e.key === 'ArrowRight') showNext();
   });
 })();
+
+
+function ensureStormPreparednessLink() {
+  const servicesMenu = document.querySelector('.nav-dropdown-services .nav-dropdown-menu');
+  if (!servicesMenu) return;
+
+  const desiredLinks = [
+    ['catastrophic-response.html', '24/7 Catastrophic Response'],
+    ['water-damage.html', 'Water Damage Restoration'],
+    ['fire-damage.html', 'Fire Damage Restoration'],
+    ['mold-remediation.html', 'Mold Remediation'],
+    ['construction.html', 'Construction and Remodeling'],
+    ['roof-tarp.html', 'Roof Tarp Services'],
+    ['storm-preparedness.html', 'Storm Preparedness'],
+    ['biohazard-cleanup.html', 'Biohazard Cleanup'],
+    ['board-up.html', 'Board Up Services'],
+    ['packout-services.html', 'Packout Services']
+  ];
+
+  servicesMenu.innerHTML = '';
+  const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+
+  desiredLinks.forEach(([href, text]) => {
+    const link = document.createElement('a');
+    link.href = href;
+    link.textContent = text;
+    if (currentPage === href.toLowerCase()) {
+      link.classList.add('active');
+    }
+    servicesMenu.appendChild(link);
+  });
+}
+
+function pinFloatingCtasToBody() {
+  const callBtn = document.querySelector('.floating-call');
+  const estimateBtn = document.querySelector('.floating-estimate');
+
+  [callBtn, estimateBtn].forEach((btn) => {
+    if (!btn) return;
+    if (btn.parentElement !== document.body) {
+      document.body.appendChild(btn);
+    }
+  });
+}
+
+window.addEventListener('load', () => {
+  ensureStormPreparednessLink();
+  pinFloatingCtasToBody();
+});
+
+ensureStormPreparednessLink();
+pinFloatingCtasToBody();
