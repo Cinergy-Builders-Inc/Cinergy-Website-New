@@ -5181,32 +5181,10 @@ html, body {
   padding: 120px 20px 80px;
 }
 
-/* Move the hero title box to the left side */
 .page-hero-content {
-  position: absolute;
-  left: 6%;
-  top: 58%;
-  transform: translateY(-50%);
-  max-width: 520px;
-  text-align: left;
-  align-items: flex-start;
-  z-index: 5;
-}
-
-/* If the title itself is centered, force it left */
-.page-hero-content h1,
-.page-hero-content p,
-.page-hero-content .section-tag {
-  text-align: left;
-}
-
-/* Optional: slightly smaller on mobile so it stays out of the image */
-@media (max-width: 768px) {
-  .page-hero-content {
-    left: 5%;
-    top: 62%;
-    max-width: 85%;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Cleaner transparent hero card */
