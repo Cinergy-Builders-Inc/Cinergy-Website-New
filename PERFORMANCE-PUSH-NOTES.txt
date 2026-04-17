@@ -1,0 +1,1 @@
+Added real storm damage image to storm-preparedness page, converted many referenced images to WebP where beneficial, removed unreferenced assets, added lightweight performance CSS helpers, and tightened image references for faster delivery.

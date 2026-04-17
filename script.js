@@ -802,9 +802,6 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
-
-
-
 document.querySelectorAll('[data-before-after-card]').forEach((card) => {
   const range = card.querySelector('.before-after-range');
   const afterClip = card.querySelector('.after-clip');
@@ -825,7 +822,6 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
   range.addEventListener('input', syncBeforeAfterCard);
   syncBeforeAfterCard();
 });
-
 
 // Completed work popup gallery
 (() => {
