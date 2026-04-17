@@ -1726,7 +1726,7 @@ textarea{min-height:160px;resize:vertical}
 .page-hero.page-banner > *,
 .service-page-hero > *,
 .page-banner > *{
-    position: left;
+    position: relative;
     z-index: 2;
 }
 
@@ -5290,4 +5290,29 @@ html, body {
 .page-hero.page-banner.estimates-full-fit,
 .page-hero.page-banner.contact-full-fit{
   background-color: transparent !important;
+}
+
+
+/* Much brighter hero overlay fix */
+.page-hero.page-banner.about-full-fit .page-banner-overlay,
+.page-hero.page-banner.about-tpa-full-fit .page-banner-overlay,
+.page-hero.page-banner.areas-full-fit .page-banner-overlay,
+.page-hero.page-banner.estimates-full-fit .page-banner-overlay,
+.page-hero.page-banner.contact-full-fit .page-banner-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.08) 0%,
+    rgba(0,0,0,0.03) 45%,
+    rgba(0,0,0,0.00) 100%
+  ) !important;
+}
+
+.page-hero.page-banner.about-full-fit .page-hero-content,
+.page-hero.page-banner.about-tpa-full-fit .page-hero-content,
+.page-hero.page-banner.areas-full-fit .page-hero-content,
+.page-hero.page-banner.estimates-full-fit .page-hero-content,
+.page-hero.page-banner.contact-full-fit .page-hero-content {
+  background: rgba(255,255,255,0.04) !important;
+  box-shadow: none !important;
+  border: none !important;
 }
