@@ -4873,10 +4873,6 @@ img{
   overflow: hidden;
 }
 
-.page-hero.page-banner[style*="service-construction.jpg"] {
-  background-position: right 50% !important;
-}
-
 .page-hero.page-banner.about-full-fit,
 .page-hero.page-banner.about-tpa-full-fit,
 .page-hero.page-banner.areas-full-fit,
