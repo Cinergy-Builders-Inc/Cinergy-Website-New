@@ -1726,7 +1726,7 @@ textarea{min-height:160px;resize:vertical}
 .page-hero.page-banner > *,
 .service-page-hero > *,
 .page-banner > *{
-    position: relative;
+    position: left;
     z-index: 2;
 }
 
