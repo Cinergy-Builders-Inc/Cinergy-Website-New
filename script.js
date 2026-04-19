@@ -938,3 +938,19 @@ window.addEventListener('load', () => {
 
 ensureStormPreparednessLink();
 pinFloatingCtasToBody();
+
+(function(){
+  const staggerGroups = document.querySelectorAll(
+    '.service-button-grid, .process-grid, .reviews-grid, .before-after-gallery, .gallery-grid, .completed-work-grid'
+  );
+
+  staggerGroups.forEach((group) => {
+    const items = group.querySelectorAll('article, a, .review-card, .slot-card, .before-after-card, .gallery-item, .project-card');
+
+    items.forEach((item) => {
+      if (!item.classList.contains('reveal')) {
+        item.classList.add('reveal');
+      }
+    });
+  });
+})();
