@@ -799,10 +799,13 @@ if (estimateForm) {
       return;
     }
 
-    const hCaptchaField = estimateForm.querySelector('textarea[name="h-captcha-response"]');
+        const hCaptchaField = estimateForm.querySelector('textarea[name="h-captcha-response"]');
     const hCaptcha = hCaptchaField ? hCaptchaField.value.trim() : '';
+    const hCaptchaResponse = (typeof window.hcaptcha !== 'undefined' && typeof window.hcaptcha.getResponse === 'function')
+      ? window.hcaptcha.getResponse()
+      : hCaptcha;
 
-    if (!hCaptcha) {
+    if (!hCaptchaResponse) {
       formStatus.className = 'form-status error';
       formStatus.textContent = 'Please complete the CAPTCHA before submitting.';
       return;
