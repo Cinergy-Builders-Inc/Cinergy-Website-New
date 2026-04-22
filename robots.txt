@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cinergy-restoration.vercel.app/sitemap.xml
+Sitemap: https://www.cbirestorations.com/sitemap.xml
