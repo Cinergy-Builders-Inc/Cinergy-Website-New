@@ -19,47 +19,7 @@
 <script defer="" src="/_vercel/insights/script.js"></script>
 <script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
 <script defer="" src="/_vercel/speed-insights/script.js"></script>
-<link as="image" href="images/hero-estimates-full.webp" rel="preload"/><meta content="#0f172a" name="theme-color"/><meta content="summary_large_image" name="twitter:card"/><meta content="Request a Restoration Estimate | Cinergy Restoration" name="twitter:title"/><meta content="Request an estimate from Cinergy Restoration for water damage, fire damage, mold remediation, reconstruction, roof tarp, board up, and remodeling services in Broward County." name="twitter:description"/><meta content="https://www.cbirestorations.com/images/hero-estimates-full.webp" property="og:image"/><meta content="Cinergy Restoration" property="og:site_name"/><meta content="https://www.cbirestorations.com/images/hero-estimates-full.webp" name="twitter:image"/>
-<style id="cinergy-form-protection-styles">
-  .form-message-inline{
-    margin-top:12px;
-    padding:12px 14px;
-    border-radius:12px;
-    font-size:14px;
-    line-height:1.45;
-    display:none;
-  }
-  .form-message-inline.is-error{
-    display:block;
-    border:1px solid rgba(220, 38, 38, 0.35);
-    background:rgba(220, 38, 38, 0.08);
-    color:#fff;
-  }
-  .form-message-inline.is-success{
-    display:block;
-    border:1px solid rgba(34, 197, 94, 0.35);
-    background:rgba(34, 197, 94, 0.10);
-    color:#fff;
-  }
-  .field-error{
-    border-color:#ef4444 !important;
-    box-shadow:0 0 0 2px rgba(239,68,68,0.15);
-  }
-  .h-captcha{
-    margin:16px 0 10px;
-  }
-  .website-field-wrap{
-    position:absolute !important;
-    left:-9999px !important;
-    width:1px !important;
-    height:1px !important;
-    overflow:hidden !important;
-    opacity:0 !important;
-    pointer-events:none !important;
-  }
-</style>
-
-</head>
+<link as="image" href="images/hero-estimates-full.webp" rel="preload"/><meta content="#0f172a" name="theme-color"/><meta content="summary_large_image" name="twitter:card"/><meta content="Request a Restoration Estimate | Cinergy Restoration" name="twitter:title"/><meta content="Request an estimate from Cinergy Restoration for water damage, fire damage, mold remediation, reconstruction, roof tarp, board up, and remodeling services in Broward County." name="twitter:description"/><meta content="https://www.cbirestorations.com/images/hero-estimates-full.webp" property="og:image"/><meta content="Cinergy Restoration" property="og:site_name"/><meta content="https://www.cbirestorations.com/images/hero-estimates-full.webp" name="twitter:image"/></head>
 <body>
 <div class="topbar">
 <div class="container topbar-inner">
@@ -136,10 +96,6 @@
 <p>Share the basics of your project, the type of damage involved, and the best way to reach you. A team member from Cinergy will contact you after the form has been submitted.</p>
 </div>
 <form action="https://api.web3forms.com/submit" class="estimate-form reveal" id="estimateForm" method="POST">
-  <div class="website-field-wrap" aria-hidden="true">
-    <label for="website-field">Leave this field empty</label>
-    <input type="text" id="website-field" name="website" tabindex="-1" autocomplete="off">
-  </div>
 <input name="access_key" type="hidden" value="31aedf29-939b-4628-aede-42bd9fb0ebe5"/>
 <input name="replyto" type="hidden" value="cinergy@cbirestorations.com"/>
 <input name="subject" type="hidden" value="New Estimate Request - Cinergy Restoration"/>
@@ -178,7 +134,6 @@
 <div class="h-captcha" data-captcha="true"></div>
 <button class="btn btn-primary full" type="submit">Send Request</button>
 <div aria-live="polite" class="form-status" id="formStatus"></div>
-  <div class="form-message-inline" aria-live="polite"></div>
 </form>
 </div>
 </section>
@@ -225,100 +180,6 @@
 </footer>
 <a aria-label="Call now" class="floating-call cta-attention pulse-ring" href="tel:9543977707"><i class="fa-solid fa-phone"></i><span class="cta-text">Call Now</span><span aria-hidden="true" class="cta-shine"></span></a>
 <a aria-label="Get an Estimate" class="floating-estimate" href="estimates.html">Get an Estimate</a>
-
 <script src="https://web3forms.com/client/script.js" async defer></script>
-<script id="cinergy-form-protection-script">
-(function(){
-  const blockedWords = ["fuck","shit","bitch","asshole","damn","motherfucker","cunt","whore","slut","dick","pussy","bastard"];
-  const forms = document.querySelectorAll("form");
-  if (!forms.length) return;
-
-  function cleanText(text){
-    return (text || "").toLowerCase().replace(/[^a-z]/g,"");
-  }
-
-  function containsBlockedLanguage(text){
-    const cleaned = cleanText(text);
-    return blockedWords.find(word => cleaned.includes(word));
-  }
-
-  function clearFieldErrors(form){
-    form.querySelectorAll(".field-error").forEach(el => el.classList.remove("field-error"));
-  }
-
-  function getMessageBox(form){
-    return form.querySelector(".form-message-inline");
-  }
-
-  function showMessage(form, message, type){
-    const box = getMessageBox(form);
-    if (!box) return;
-    box.textContent = message;
-    box.className = "form-message-inline " + (type === "success" ? "is-success" : "is-error");
-    box.style.display = "block";
-  }
-
-  function hideMessage(form){
-    const box = getMessageBox(form);
-    if (!box) return;
-    box.textContent = "";
-    box.className = "form-message-inline";
-    box.style.display = "none";
-  }
-
-  forms.forEach(function(form){
-    const protectedFields = form.querySelectorAll("input[type='text'], input[type='email'], input[type='tel'], textarea");
-    const honeypot = form.querySelector("input[name='website']");
-    const submitBtn = form.querySelector("button[type='submit'], input[type='submit']");
-
-    protectedFields.forEach(function(field){
-      field.addEventListener("input", function(){
-        field.classList.remove("field-error");
-        hideMessage(form);
-      });
-    });
-
-    form.addEventListener("submit", function(e){
-      clearFieldErrors(form);
-      hideMessage(form);
-
-      if (honeypot && honeypot.value.trim() !== ""){
-        e.preventDefault();
-        showMessage(form, "Spam protection was triggered. Please refresh and try again.", "error");
-        return;
-      }
-
-      let badField = null;
-      let badWord = null;
-
-      protectedFields.forEach(function(field){
-        const found = containsBlockedLanguage(field.value);
-        if (!badField && found){
-          badField = field;
-          badWord = found;
-        }
-      });
-
-      if (badField){
-        e.preventDefault();
-        badField.classList.add("field-error");
-        badField.focus();
-        showMessage(form, "Please remove inappropriate language before submitting.", "error");
-        return;
-      }
-
-      const captcha = form.querySelector(".h-captcha iframe");
-      if (!captcha) {
-        showMessage(form, "Please complete the CAPTCHA before submitting.", "error");
-      }
-
-      if (submitBtn && submitBtn.tagName === "BUTTON"){
-        submitBtn.disabled = false;
-      }
-    });
-  });
-})();
-</script>
-
 </body>
 </html>
