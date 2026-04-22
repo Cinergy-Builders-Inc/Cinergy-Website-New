@@ -5377,3 +5377,13 @@ body > .floating-call{
 .container{
   overflow:visible !important;
 }
+
+.captcha-wrapper{
+  margin:20px 0;
+  min-height:80px;
+}
+
+.h-captcha{
+  display:block !important;
+  min-height:78px !important;
+}
