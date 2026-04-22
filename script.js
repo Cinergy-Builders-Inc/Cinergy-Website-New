@@ -698,7 +698,7 @@ const serviceZipData = {
   "36689": {"label": "Alabama Gulf Coast service area"},
   "36691": {"label": "Alabama Gulf Coast service area"},
   "36693": {"label": "Alabama Gulf Coast service area"},
-  "36695": {"label": "Alabama Gulf Coast service area"},
+  "36695": {"label": "Alabama Gulf Coast service area"}
 };
 
 const zipInput = document.getElementById('zipInput');
@@ -834,22 +834,6 @@ if (estimateForm) {
     }
   });
 }
-      });
-
-      if (response.ok) {
-        estimateForm.reset();
-        formStatus.className = 'form-status success';
-        formStatus.textContent = 'Thanks for your submission. A Cinergy team member will contact you soon.';
-      } else {
-        formStatus.className = 'form-status error';
-        formStatus.textContent = 'We could not send your form right now. Please try again or call us directly.';
-      }
-    } catch (err) {
-      formStatus.className = 'form-status error';
-      formStatus.textContent = 'We could not send your form right now. Please try again or call us directly.';
-    }
-  });
-}
 
 // Close mobile nav when a link is tapped
 document.querySelectorAll('.main-nav a').forEach((link) => {
@@ -948,7 +932,6 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
     if (e.key === 'ArrowRight') showNext();
   });
 })();
-
 
 function ensureStormPreparednessLink() {
   const servicesMenu = document.querySelector('.nav-dropdown-services .nav-dropdown-menu');
