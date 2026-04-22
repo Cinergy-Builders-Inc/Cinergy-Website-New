@@ -754,7 +754,7 @@ if (zipInput) zipInput.addEventListener('keydown', (e) => {
   }
 });
 
-// Estimate form AJAX submit with in-page thank-you message
+// Estimate form AJAX submit with captcha + bad word check
 const estimateForm = document.getElementById('estimateForm');
 const formStatus = document.getElementById('formStatus');
 
@@ -762,6 +762,51 @@ if (estimateForm) {
   estimateForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!formStatus) return;
+
+    const blockedWords = ["fuck","shit","bitch","asshole","damn","motherfucker","cunt","whore","slut","dick","pussy","bastard"];
+    const protectedFields = estimateForm.querySelectorAll("input[type='text'], input[type='email'], input[type='tel'], textarea");
+    const honeypot = estimateForm.querySelector("input[name='website']");
+
+    function cleanText(text) {
+      return (text || '').toLowerCase().replace(/[^a-z]/g, '');
+    }
+
+    function containsBlockedLanguage(text) {
+      const cleaned = cleanText(text);
+      return blockedWords.find(word => cleaned.includes(word));
+    }
+
+    formStatus.className = 'form-status';
+    estimateForm.querySelectorAll('.field-error').forEach((el) => el.classList.remove('field-error'));
+
+    if (honeypot && honeypot.value.trim() !== '') {
+      formStatus.className = 'form-status error';
+      formStatus.textContent = 'Spam protection was triggered. Please refresh and try again.';
+      return;
+    }
+
+    let badField = null;
+    protectedFields.forEach((field) => {
+      const found = containsBlockedLanguage(field.value);
+      if (!badField && found) badField = field;
+    });
+
+    if (badField) {
+      badField.classList.add('field-error');
+      badField.focus();
+      formStatus.className = 'form-status error';
+      formStatus.textContent = 'Please remove inappropriate language before submitting.';
+      return;
+    }
+
+    const hCaptchaField = estimateForm.querySelector('textarea[name="h-captcha-response"]');
+    const hCaptcha = hCaptchaField ? hCaptchaField.value.trim() : '';
+
+    if (!hCaptcha) {
+      formStatus.className = 'form-status error';
+      formStatus.textContent = 'Please complete the CAPTCHA before submitting.';
+      return;
+    }
 
     formStatus.className = 'form-status pending';
     formStatus.textContent = 'Sending your request...';
@@ -772,6 +817,23 @@ if (estimateForm) {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        estimateForm.reset();
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Thanks for your submission. A Cinergy team member will contact you soon.';
+      } else {
+        const data = await response.json().catch(() => null);
+        formStatus.className = 'form-status error';
+        formStatus.textContent = data?.message || 'We could not send your form right now. Please try again or call us directly.';
+      }
+    } catch (err) {
+      formStatus.className = 'form-status error';
+      formStatus.textContent = 'We could not send your form right now. Please try again or call us directly.';
+    }
+  });
+}
       });
 
       if (response.ok) {
