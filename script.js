@@ -839,8 +839,6 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
-
-// Before / After slider sync fix
 document.querySelectorAll('[data-before-after-card]').forEach((card) => {
   const range = card.querySelector('.before-after-range');
   const afterClip = card.querySelector('.after-clip');
@@ -848,17 +846,20 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
 
   if (!range || !afterClip || !handle) return;
 
+  // FORCE START LEFT
+  range.value = 0;
+
   const syncBeforeAfterCard = () => {
-    const value = Math.max(0, Math.min(100, Number(range.value || 50)));
-    const percent = `${value}%`;
-    afterClip.style.width = percent;
-    handle.style.left = percent;
-    card.classList.toggle('after-highlighted', value >= 50);
-    afterClip.classList.toggle('is-active', value >= 50);
+    const value = `${range.value}%`;
+    afterClip.style.width = value;
+    handle.style.left = value;
+
+    const isAfterActive = Number(range.value) > 5;
+    card.classList.toggle('after-highlighted', isAfterActive);
+    afterClip.classList.toggle('is-active', isAfterActive);
   };
 
   range.addEventListener('input', syncBeforeAfterCard);
-  range.addEventListener('change', syncBeforeAfterCard);
   syncBeforeAfterCard();
 });
 
