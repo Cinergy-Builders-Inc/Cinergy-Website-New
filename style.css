@@ -5338,3 +5338,114 @@ body > .floating-call{
   background:rgba(109,255,95,0.12);
   border-radius:10px;
 }
+
+
+/* Before / After slider alignment fix */
+.before-after-card,
+[data-before-after-card]{
+  overflow: visible !important;
+}
+
+.before-after-wrapper,
+.before-after-media,
+.before-after-image-wrap,
+.before-after-frame{
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  background: #061006 !important;
+}
+
+.before-after-wrapper img,
+.before-after-media img,
+.before-after-image-wrap img,
+.before-after-frame img,
+.before-image,
+.after-image{
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  user-select: none !important;
+  pointer-events: none !important;
+}
+
+.after-clip{
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 100% !important;
+  width: 50%;
+  overflow: hidden !important;
+  z-index: 2 !important;
+  transition: none !important;
+}
+
+.after-clip img,
+.after-clip .after-image{
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.before-after-handle{
+  position: absolute !important;
+  top: 0 !important;
+  left: 50%;
+  height: 100% !important;
+  width: 3px !important;
+  transform: translateX(-50%) !important;
+  background: linear-gradient(180deg, rgba(157,241,155,.15), #7dff74, rgba(157,241,155,.15)) !important;
+  box-shadow: 0 0 16px rgba(125,255,116,.45) !important;
+  z-index: 5 !important;
+  pointer-events: none !important;
+}
+
+.before-after-handle::before{
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 18px !important;
+  height: 18px !important;
+  transform: translate(-50%, -50%) !important;
+  border-radius: 999px !important;
+  background: #7dff74 !important;
+  border: 3px solid rgba(5,16,5,.85) !important;
+  box-shadow: 0 0 18px rgba(125,255,116,.55) !important;
+}
+
+.before-after-range{
+  width: 100% !important;
+  display: block !important;
+  margin: 18px 0 0 !important;
+  position: relative !important;
+  z-index: 6 !important;
+  cursor: pointer !important;
+}
+
+[data-before-after-card] .before-label,
+[data-before-after-card] .after-label,
+.before-label,
+.after-label{
+  z-index: 8 !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 760px){
+  .before-after-wrapper,
+  .before-after-media,
+  .before-after-image-wrap,
+  .before-after-frame{
+    aspect-ratio: 4 / 3 !important;
+  }
+}
