@@ -813,7 +813,7 @@ if (estimateForm) {
       if (response.ok) {
         estimateForm.reset();
         formStatus.className = 'form-status success';
-        formStatus.textContent = 'Thanks for your submission. A Cinergy team member will contact you soon.';
+        formStatus.textContent = 'Thanks for your submission. A Cinergy team member will contact you soon. For emergencies, call 954-397-7707 anytime.';
       } else {
         const data = await response.json().catch(() => null);
         formStatus.className = 'form-status error';

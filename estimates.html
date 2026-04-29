@@ -113,6 +113,12 @@
 <label>Email Address
         <input autocomplete="email" maxlength="120" name="email" placeholder="you@example.com" required="" type="email"/>
 </label>
+<label>Is this an emergency?
+        <select name="emergency">
+<option>Yes — I need urgent help</option>
+<option>No — estimate/planning request</option>
+</select>
+</label>
 <label>Service Needed
         <select name="service">
 <option>Water Damage Restoration</option>
@@ -131,7 +137,8 @@
 <label>Project Details
         <textarea maxlength="3000" minlength="10" name="message" placeholder="Tell us what happened, where the property is located, and anything else we should know." required=""></textarea>
 </label>
-<button class="btn btn-primary full" type="submit">Send Request</button>
+<p class="form-response-note">For emergencies, call <a href="tel:9543977707">954-397-7707</a>. We typically respond quickly during active emergency calls.</p>
+<button class="btn btn-primary full" type="submit">Send Request — Fast Response</button>
 <div aria-live="polite" class="form-status" id="formStatus"></div>
 </form>
 </div>
