@@ -698,7 +698,7 @@ const serviceZipData = {
   "36689": {"label": "Alabama Gulf Coast service area"},
   "36691": {"label": "Alabama Gulf Coast service area"},
   "36693": {"label": "Alabama Gulf Coast service area"},
-  "36695": {"label": "Alabama Gulf Coast service area"}
+  "36695": {"label": "Alabama Gulf Coast service area"},
 };
 
 const zipInput = document.getElementById('zipInput');
@@ -754,7 +754,7 @@ if (zipInput) zipInput.addEventListener('keydown', (e) => {
   }
 });
 
-// Estimate form AJAX submit with captcha + bad word check
+// Estimate form AJAX submit with in-page thank-you message
 const estimateForm = document.getElementById('estimateForm');
 const formStatus = document.getElementById('formStatus');
 
@@ -762,42 +762,6 @@ if (estimateForm) {
   estimateForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!formStatus) return;
-
-    const blockedWords = ["fuck","shit","bitch","asshole","damn","motherfucker","cunt","whore","slut","dick","pussy","bastard"];
-    const protectedFields = estimateForm.querySelectorAll("input[type='text'], input[type='email'], input[type='tel'], textarea");
-    const honeypot = estimateForm.querySelector("input[name='website']");
-
-    function cleanText(text) {
-      return (text || '').toLowerCase().replace(/[^a-z]/g, '');
-    }
-
-    function containsBlockedLanguage(text) {
-      const cleaned = cleanText(text);
-      return blockedWords.find(word => cleaned.includes(word));
-    }
-
-    formStatus.className = 'form-status';
-    estimateForm.querySelectorAll('.field-error').forEach((el) => el.classList.remove('field-error'));
-
-    if (honeypot && honeypot.value.trim() !== '') {
-      formStatus.className = 'form-status error';
-      formStatus.textContent = 'Spam protection was triggered. Please refresh and try again.';
-      return;
-    }
-
-    let badField = null;
-    protectedFields.forEach((field) => {
-      const found = containsBlockedLanguage(field.value);
-      if (!badField && found) badField = field;
-    });
-
-    if (badField) {
-      badField.classList.add('field-error');
-      badField.focus();
-      formStatus.className = 'form-status error';
-      formStatus.textContent = 'Please remove inappropriate language before submitting.';
-      return;
-    }
 
     formStatus.className = 'form-status pending';
     formStatus.textContent = 'Sending your request...';
@@ -815,9 +779,8 @@ if (estimateForm) {
         formStatus.className = 'form-status success';
         formStatus.textContent = 'Thanks for your submission. A Cinergy team member will contact you soon.';
       } else {
-        const data = await response.json().catch(() => null);
         formStatus.className = 'form-status error';
-        formStatus.textContent = data?.message || 'We could not send your form right now. Please try again or call us directly.';
+        formStatus.textContent = 'We could not send your form right now. Please try again or call us directly.';
       }
     } catch (err) {
       formStatus.className = 'form-status error';
@@ -839,6 +802,9 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
+
+
+
 document.querySelectorAll('[data-before-after-card]').forEach((card) => {
   const range = card.querySelector('.before-after-range');
   const afterClip = card.querySelector('.after-clip');
@@ -846,15 +812,12 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
 
   if (!range || !afterClip || !handle) return;
 
-  // FORCE START LEFT
-  range.value = 0;
-
   const syncBeforeAfterCard = () => {
     const value = `${range.value}%`;
     afterClip.style.width = value;
     handle.style.left = value;
 
-    const isAfterActive = Number(range.value) > 5;
+    const isAfterActive = Number(range.value) >= 50;
     card.classList.toggle('after-highlighted', isAfterActive);
     afterClip.classList.toggle('is-active', isAfterActive);
   };
@@ -862,6 +825,7 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
   range.addEventListener('input', syncBeforeAfterCard);
   syncBeforeAfterCard();
 });
+
 
 // Completed work popup gallery
 (() => {
@@ -927,53 +891,83 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
   });
 })();
 
-function ensureStormPreparednessLink() {
-  const servicesMenu = document.querySelector('.nav-dropdown-services .nav-dropdown-menu');
-  if (!servicesMenu) return;
 
-  const desiredLinks = [
-    ['catastrophic-response.html', '24/7 Catastrophic Response'],
-    ['water-damage.html', 'Water Damage Restoration'],
-    ['fire-damage.html', 'Fire Damage Restoration'],
-    ['mold-remediation.html', 'Mold Remediation'],
-    ['construction.html', 'Construction and Remodeling'],
-    ['roof-tarp.html', 'Roof Tarp Services'],
-    ['storm-preparedness.html', 'Storm Preparedness'],
-    ['biohazard-cleanup.html', 'Biohazard Cleanup'],
-    ['board-up.html', 'Board Up Services'],
-    ['packout-services.html', 'Packout Services']
-  ];
+// August 2026: dismissible Indiana response banner + homepage estimate modal
+(() => {
+  const alert = document.getElementById('indianaFloodAlert');
+  const dismiss = document.getElementById('dismissIndianaAlert');
+  const storageKey = 'cinergyIndianaFloodAlertDismissed';
 
-  servicesMenu.innerHTML = '';
-  const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  try {
+    if (alert && localStorage.getItem(storageKey) === '1') alert.hidden = true;
+  } catch (_) {}
 
-  desiredLinks.forEach(([href, text]) => {
-    const link = document.createElement('a');
-    link.href = href;
-    link.textContent = text;
-    if (currentPage === href.toLowerCase()) {
-      link.classList.add('active');
-    }
-    servicesMenu.appendChild(link);
+  dismiss?.addEventListener('click', () => {
+    if (alert) alert.hidden = true;
+    try { localStorage.setItem(storageKey, '1'); } catch (_) {}
   });
-}
 
-function pinFloatingCtasToBody() {
-  const callBtn = document.querySelector('.floating-call');
-  const estimateBtn = document.querySelector('.floating-estimate');
+  const modal = document.getElementById('estimateModal');
+  const openButtons = document.querySelectorAll('.js-open-estimate');
+  const closeButtons = document.querySelectorAll('[data-close-estimate]');
+  let lastFocused = null;
 
-  [callBtn, estimateBtn].forEach((btn) => {
-    if (!btn) return;
-    if (btn.parentElement !== document.body) {
-      document.body.appendChild(btn);
+  const openModal = () => {
+    if (!modal) return;
+    lastFocused = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('estimate-modal-open');
+    const firstInput = modal.querySelector('input:not([type="hidden"]), select, textarea, button');
+    window.setTimeout(() => firstInput?.focus(), 50);
+  };
+
+  const closeModal = () => {
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('estimate-modal-open');
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  };
+
+  openButtons.forEach((button) => button.addEventListener('click', openModal));
+  closeButtons.forEach((button) => button.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal?.classList.contains('open')) closeModal();
+  });
+
+  const form = document.getElementById('homepageEstimateForm');
+  const status = document.getElementById('homepageFormStatus');
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!status) return;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalText = submitButton?.textContent || 'Submit Request';
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+    }
+    status.className = 'form-status';
+    status.textContent = '';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!response.ok) throw new Error('Form submission failed');
+      form.reset();
+      status.className = 'form-status success';
+      status.textContent = 'Thank you. Your request has been received and a Cinergy team member will contact you soon.';
+    } catch (_) {
+      status.className = 'form-status error';
+      status.textContent = 'We could not send your request right now. Please try again or call 954-397-7707.';
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+      }
     }
   });
-}
-
-window.addEventListener('load', () => {
-  ensureStormPreparednessLink();
-  pinFloatingCtasToBody();
-});
-
-ensureStormPreparednessLink();
-pinFloatingCtasToBody();
+})();

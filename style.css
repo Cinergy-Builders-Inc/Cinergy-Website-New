@@ -98,7 +98,7 @@ a{text-decoration:none;color:inherit}
 .page-hero-content{padding:100px 0 46px;max-width:760px;margin-bottom:26px}
 .eyebrow,.section-tag{display:inline-flex;align-items:center;gap:8px;background:var(--green-soft);border:1px solid rgba(31,194,27,.22);color:#a1f29e;border-radius:999px;padding:9px 13px;font-size:13px;font-weight:800}
 .hero h1,.page-hero h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:18px 0 14px;max-width:12ch}
-.hero p,.page-hero p{color:#f3f3f3;font-size:clamp(17px,2vw,20px);max-width:650px}
+.hero p,.page-hero p{color:var(--muted);font-size:clamp(17px,2vw,20px);max-width:650px}
 .hero-actions,.banner-actions,.zip-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
 
 .biohazard-hero img {
@@ -266,6 +266,7 @@ textarea{min-height:160px;resize:vertical}
   .feature-panel,.banner-card,.contact-card.big,.estimate-form,.service-area-card,.card,.team-card{padding:20px}
 }
 
+
 .nav-cta{
   background:#19d11a !important;
   color:#041004 !important;
@@ -323,6 +324,7 @@ textarea{min-height:160px;resize:vertical}
   }
 }
 
+
 .section-heading.center{
   text-align:center;
 }
@@ -354,6 +356,7 @@ textarea{min-height:160px;resize:vertical}
   margin-top:10px;
 }
 
+
 /* Cinergy green map tint override */
 .florida-map-image,
 .service-map img,
@@ -369,6 +372,7 @@ textarea{min-height:160px;resize:vertical}
   filter: brightness(1) saturate(1.45) hue-rotate(-36deg) contrast(1.1)
           drop-shadow(0 0 16px rgba(49, 201, 67, 0.55)) !important;
 }
+
 
 /* Homepage Google reviews section */
 .reviews-home-section .section-heading{
@@ -407,6 +411,7 @@ textarea{min-height:160px;resize:vertical}
     grid-template-columns:1fr;
   }
 }
+
 
 /* Actual Google reviews section */
 .reviews-home-section .section-heading{
@@ -480,6 +485,7 @@ textarea{min-height:160px;resize:vertical}
     grid-template-columns:1fr;
   }
 }
+
 
 /* Reviews slideshow upgrade */
 .reviews-slideshow{
@@ -579,6 +585,7 @@ textarea{min-height:160px;resize:vertical}
   }
 }
 
+
 /* Auto-scrolling review marquee */
 .reviews-marquee{
   display:block;
@@ -629,6 +636,7 @@ textarea{min-height:160px;resize:vertical}
     animation-duration:30s;
   }
 }
+
 
 /* In-page estimate form status */
 .form-status{
@@ -772,6 +780,7 @@ textarea{min-height:160px;resize:vertical}
   }
 }
 
+
 /* Footer socials styled to match header socials */
 .footer-socials{
   display:flex;
@@ -804,6 +813,7 @@ textarea{min-height:160px;resize:vertical}
 .footer-socials a i{
   font-size:18px;
 }
+
 
 /* Desktop header cleanup: keep nav on one line */
 .header-inner{
@@ -947,6 +957,7 @@ textarea{min-height:160px;resize:vertical}
   text-align:center;
 }
 
+
 .service-detail-grid{
   display:grid;
   grid-template-columns:1.1fr .9fr;
@@ -969,6 +980,7 @@ textarea{min-height:160px;resize:vertical}
     grid-template-columns:1fr;
   }
 }
+
 
 /* Services overview layout to match requested screenshots */
 .services-overview-intro{
@@ -1008,6 +1020,7 @@ textarea{min-height:160px;resize:vertical}
   }
 }
 
+
 /* Home gallery button */
 .gallery-button-wrap{
   display:flex;
@@ -1027,6 +1040,7 @@ textarea{min-height:160px;resize:vertical}
     height:300px;
   }
 }
+
 
 /* Dropdown interaction fix */
 .nav-dropdown{
@@ -1059,6 +1073,7 @@ textarea{min-height:160px;resize:vertical}
 .services-trigger .fa-angle-down{
   transition:transform .2s ease;
 }
+
 
 /* Header spacing and interaction improvements */
 .site-header{
@@ -1167,6 +1182,9 @@ textarea{min-height:160px;resize:vertical}
   pointer-events: none;
 }
 
+
+
+
 /* Restore original header layout with minor spacing fix */
 @media (min-width: 981px){
   .header-inner{
@@ -1210,6 +1228,7 @@ textarea{min-height:160px;resize:vertical}
   }
 }
 
+
 /* Fix LinkedIn icon alignment in header */
 @media (min-width: 981px){
   .header-socials{
@@ -1228,6 +1247,7 @@ textarea{min-height:160px;resize:vertical}
   }
 }
 
+
 /* Move Cinergy logo/brand block further left */
 @media (min-width: 981px){
   .header-inner{
@@ -1243,6 +1263,7 @@ textarea{min-height:160px;resize:vertical}
   }
 }
 
+
 /* Push logo farther left and give nav more separation */
 @media (min-width: 981px){
   .brand,
@@ -1256,6 +1277,7 @@ textarea{min-height:160px;resize:vertical}
     margin-left: 28px !important;
   }
 }
+
 
 /* Dropdowns stay open while moving mouse */
 .nav-dropdown{
@@ -1324,6 +1346,7 @@ textarea{min-height:160px;resize:vertical}
     display:none !important;
   }
 }
+
 
 /* Final mobile header alignment + stable dropdown hit area */
 .nav-dropdown-menu{
@@ -1397,6 +1420,7 @@ textarea{min-height:160px;resize:vertical}
   }
 }
 
+
 /* Mobile: logo slightly left of centered hamburger */
 @media (max-width: 980px){
   .site-header .header-inner{
@@ -1429,6 +1453,7 @@ textarea{min-height:160px;resize:vertical}
     text-align:left !important;
   }
 }
+
 
 /* Final mobile header cleanup */
 @media (max-width: 980px){
@@ -1526,6 +1551,7 @@ textarea{min-height:160px;resize:vertical}
   display: block !important;
   width: 100% !important;
 }
+
 
 /* Mobile header final alignment */
 @media (max-width: 980px){
@@ -1671,6 +1697,7 @@ textarea{min-height:160px;resize:vertical}
   }
 }
 
+
 /* Better visibility for all individual service page hero photos */
 .page-hero.page-banner,
 .service-page-hero,
@@ -1749,6 +1776,7 @@ body.tarp-page .page-banner,
     }
 }
 
+
 /* Services dropdown + homepage buttons */
 .nav-dropdown{
   position:relative;
@@ -1812,6 +1840,7 @@ body.tarp-page .page-banner,
   }
 }
 
+
 /* Mobile dropdown row alignment fix */
 @media (max-width: 980px){
   .main-nav .nav-dropdown{
@@ -1859,6 +1888,7 @@ body.tarp-page .page-banner,
     justify-content:space-between !important;
   }
 }
+
 
 /* Polished mobile dropdown panel */
 @media (max-width: 980px){
@@ -1927,6 +1957,7 @@ body.tarp-page .page-banner,
   }
 }
 
+
 /* Make About and Services rows match on mobile */
 @media (max-width: 980px){
   .main-nav .nav-dropdown{
@@ -1979,6 +2010,7 @@ body.tarp-page .page-banner,
     display:none !important;
   }
 }
+
 
 /* Match Services caret styling with About on mobile */
 @media (max-width: 980px){
@@ -2070,6 +2102,7 @@ body[class*="tarp"] .page-banner{
   background-color:#081008 !important;
 }
 
+
 /* Make service page hero content card more transparent */
 .container.page-hero-content{
   background: rgba(8, 16, 12, 0.16) !important;
@@ -2084,6 +2117,7 @@ body[class*="tarp"] .page-banner{
     background: rgba(8, 16, 12, 0.20) !important;
   }
 }
+
 
 /* Make About and Services mobile rows match exactly */
 @media (max-width: 980px){
@@ -2138,6 +2172,7 @@ body[class*="tarp"] .page-banner{
     width:100% !important;
   }
 }
+
 
 /* === Final navigation cleanup === */
 :root{
@@ -2268,6 +2303,7 @@ body[class*="tarp"] .page-banner{
   }
 }
 
+
 /* --- Services dropdown refactor to match About --- */
 .nav-dropdown-services .nav-link-main{
   display:flex;
@@ -2315,6 +2351,7 @@ body[class*="tarp"] .page-banner{
   }
 }
 
+
 /* Services label only (no clickable page link) */
 .nav-link-label{
   cursor: default;
@@ -2322,6 +2359,7 @@ body[class*="tarp"] .page-banner{
   color: #fff;
   text-decoration: none;
 }
+
 
 /* --- Recommended polish upgrade --- */
 .hero-overlay{
@@ -2489,6 +2527,7 @@ body[class*="tarp"] .page-banner{
   }
 }
 
+
 /* --- Before/After multi-card upgrade --- */
 .before-after-gallery{
   display:grid;
@@ -2550,6 +2589,7 @@ body[class*="tarp"] .page-banner{
   }
 }
 
+
 /* Homepage final cleanup */
 .before-after-gallery{
   grid-template-columns: repeat(3, minmax(0,1fr));
@@ -2566,6 +2606,7 @@ body[class*="tarp"] .page-banner{
     grid-template-columns: 1fr;
   }
 }
+
 
 /* --- Final visual polish pass --- */
 :root{
@@ -2698,6 +2739,7 @@ body[class*="tarp"] .page-banner{
   }
 }
 
+
 /* Full-width header update */
 .site-header,
 .topbar{
@@ -2757,6 +2799,7 @@ body[class*="tarp"] .page-banner{
   }
 }
 
+
 .topbar .container{
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -2786,6 +2829,7 @@ body[class*="tarp"] .page-banner{
     padding: 0 12px;
   }
 }
+
 
 /* Header spacing cleanup */
 .topbar .container{
@@ -2833,6 +2877,7 @@ body[class*="tarp"] .page-banner{
     0 10px 30px rgba(0,0,0,0.18);
 }
 
+
 /* Better spacing for logo / brand block */
 .header-inner{
   padding-left: 34px;
@@ -2853,6 +2898,7 @@ body[class*="tarp"] .page-banner{
     margin-left: 10px;
   }
 }
+
 
 /* Move brand block closer to Home button */
 .header-inner{
@@ -2877,6 +2923,7 @@ body[class*="tarp"] .page-banner{
     margin-right: 24px;
   }
 }
+
 
 /* Better spacing for certification text */
 .license-group{
@@ -2908,6 +2955,7 @@ body[class*="tarp"] .page-banner{
   }
 }
 
+
 /* Align logo block under beginning of topbar text */
 .topbar .container,
 .header-inner{
@@ -2925,6 +2973,7 @@ body[class*="tarp"] .page-banner{
     margin-left: 10px;
   }
 }
+
 
 /* Fill empty space between logo and navigation */
 .header-inner{
@@ -2963,6 +3012,7 @@ body[class*="tarp"] .page-banner{
   }
 }
 
+
 /* Actual brand shift into empty header space */
 .header-inner{
   display:flex;
@@ -2986,6 +3036,7 @@ body[class*="tarp"] .page-banner{
     min-width: auto;
   }
 }
+
 
 /* Desktop header fit cleanup */
 @media (min-width: 981px){
@@ -3121,6 +3172,7 @@ body[class*="tarp"] .page-banner{
   }
 }
 
+
 /* Trust section refinements */
 .trust-strip-heading{
   margin-bottom: 18px;
@@ -3215,6 +3267,7 @@ img{
     grid-template-columns: 1fr;
   }
 }
+
 
 /* Final county + header cleanup */
 :root{
@@ -3488,6 +3541,7 @@ img{
   }
 }
 
+
 /* Mobile floating CTA cleanup */
 @media (max-width: 980px){
   .floating-estimate,
@@ -3541,6 +3595,7 @@ img{
     padding-bottom: 145px;
   }
 }
+
 
 /* --- Final header smoothing pass --- */
 @media (min-width: 981px){
@@ -3665,6 +3720,7 @@ img{
   }
 }
 
+
 /* About page copy section */
 .about-intro-copy{
   padding-top: 22px;
@@ -3685,6 +3741,7 @@ img{
     gap: 14px;
   }
 }
+
 
 /* --- Mobile logo text smoothing + topbar/header spacing fix --- */
 .topbar .container{
@@ -3875,6 +3932,7 @@ img{
     max-width:138px !important;
   }
 }
+
 
 /* --- Final requested topbar / header / mobile brand fixes --- */
 .topbar .container{
@@ -4091,6 +4149,7 @@ img{
   }
 }
 
+
 /* Match desktop header spacing to approved layout */
 @media (min-width: 981px){
   .header-inner{
@@ -4140,6 +4199,7 @@ img{
   }
 }
 
+
 /* Center the top bar content on desktop */
 @media (min-width: 981px){
   .topbar .container{
@@ -4164,6 +4224,7 @@ img{
     gap:10px !important;
   }
 }
+
 
 /* Final desktop alignment adjustment requested */
 @media (min-width: 981px){
@@ -4193,6 +4254,7 @@ img{
     margin-left:auto !important;
   }
 }
+
 
 /* Rebalanced desktop header so the whole composition feels centered */
 @media (min-width: 981px){
@@ -4316,6 +4378,7 @@ img{
   }
 }
 
+
 /* Tighten desktop header spacing further */
 @media (min-width: 981px){
   .header-inner{
@@ -4384,6 +4447,7 @@ img{
   }
 }
 
+
 /* Reduce oversized gap between logo block and Home so both sides feel balanced */
 @media (min-width: 981px){
   .header-inner{
@@ -4411,6 +4475,7 @@ img{
     justify-content: flex-start !important;
   }
 }
+
 
 /* Tighten the logo-to-Home gap one more step */
 @media (min-width: 981px){
@@ -4460,6 +4525,7 @@ img{
     gap: 9px !important;
   }
 }
+
 
 /* Requested fresh updates */
 .page-banner-overlay{
@@ -4614,6 +4680,7 @@ img{
   }
 }
 
+
 .completed-info-grid{
   display:grid;
   grid-template-columns:1.5fr .9fr;
@@ -4674,6 +4741,7 @@ img{
     grid-template-columns:1fr;
   }
 }
+
 
 /* Completed work page tuned to match desired layout */
 .completed-work-intro-wrap{
@@ -4798,6 +4866,7 @@ img{
   }
 }
 
+
 /* Interior pages: show full hero artwork without cropping */
 .page-hero.page-banner{
   position: relative;
@@ -4877,6 +4946,7 @@ img{
   }
 }
 
+
 /* SEO accessibility helper */
 .sr-only {
   position: absolute !important;
@@ -4889,6 +4959,7 @@ img{
   white-space: nowrap;
   border: 0;
 }
+
 
 /* April 2026 update: crisper service heroes, dedicated completed work hero, larger before/after */
 .page-hero.page-banner:not(.about-full-fit):not(.about-tpa-full-fit):not(.areas-full-fit):not(.estimates-full-fit):not(.contact-full-fit):not(.completed-work-full-fit){
@@ -4953,6 +5024,7 @@ img{
   }
 }
 
+
 /* April 2026 final polish: homepage CTA copy, completed work hero, bigger before/after */
 .completed-work-full-fit .page-banner-overlay{
   background: linear-gradient(90deg, rgba(5,10,7,.22) 0%, rgba(5,10,7,.10) 42%, rgba(5,10,7,.12) 100%) !important;
@@ -5007,6 +5079,7 @@ img{
   }
 }
 
+
 /* April 16 targeted hero fixes */
 .hero-water-damage{
   background-size: contain !important;
@@ -5040,6 +5113,7 @@ img{
   min-height:60px !important;
 }
 
+
 .footer-satisfaction-wrap{
   margin-top:18px;
   display:flex;
@@ -5053,6 +5127,8 @@ img{
   display:block;
   filter:drop-shadow(0 10px 18px rgba(0,0,0,.35));
 }
+
+
 
 /* Match service page hero sizing/layout to the About / Contact style while keeping each page's own image */
 .page-banner{
@@ -5216,6 +5292,7 @@ html, body {
   background-color: transparent !important;
 }
 
+
 /* Much brighter hero overlay fix */
 .page-hero.page-banner.about-full-fit .page-banner-overlay,
 .page-hero.page-banner.about-tpa-full-fit .page-banner-overlay,
@@ -5240,101 +5317,204 @@ html, body {
   border: none !important;
 }
 
-/* April 17 2026 performance + brighter hero pass */
-.hero-bg{
-  transform:none !important;
-  filter:saturate(1.02) contrast(1.03) brightness(1.08) !important;
+
+/* August 2026 homepage conversion + Indiana flood response update */
+.indiana-alert{
+  position:relative;
+  z-index:20;
+  background:linear-gradient(90deg, rgba(16,61,44,.98), rgba(24,96,62,.98));
+  border-bottom:1px solid rgba(255,255,255,.14);
+  color:#fff;
 }
-.hero-overlay{
-  background:
-    linear-gradient(90deg, rgba(3,8,4,.46) 0%, rgba(4,8,4,.24) 44%, rgba(4,8,4,.10) 100%),
-    linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.12)) !important;
+.indiana-alert[hidden]{display:none!important}
+.indiana-alert .container{width:min(1480px, calc(100% - 40px))}
+.indiana-alert-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:9px;padding-bottom:9px}
+.indiana-alert-copy{display:flex;align-items:center;gap:14px;min-width:0;font-size:13.5px;line-height:1.35;flex:1}
+.indiana-alert-message{display:flex;flex-direction:column;justify-content:center;gap:4px;min-width:0;max-width:860px}
+.indiana-alert-counties{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-size:12.75px;font-weight:700;line-height:1.25;color:rgba(255,255,255,.94)}
+.indiana-alert-counties span{white-space:nowrap}
+.indiana-alert-badge{display:inline-flex;align-items:center;gap:7px;flex:0 0 auto;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.13);font-weight:800;letter-spacing:.01em;white-space:nowrap}
+.indiana-alert-actions{display:flex;align-items:center;gap:9px;flex:0 0 auto}
+.indiana-alert-call{color:#fff;font-size:13.5px;font-weight:800;white-space:nowrap;text-decoration:none}
+.indiana-alert-call:hover{text-decoration:underline}
+.indiana-alert-help{border:1px solid rgba(255,255,255,.45);background:#fff;color:#123f2e;border-radius:999px;padding:7px 12px;font:inherit;font-size:13.5px;font-weight:800;cursor:pointer;white-space:nowrap}
+.indiana-alert-close{width:30px;height:30px;border:0;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:21px;line-height:1;cursor:pointer}
+.indiana-alert-close:hover{background:rgba(255,255,255,.2)}
+
+/* Five-person team: balanced 3 + 2 presentation */
+.team-grid-5{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.team-grid-5 .team-card{grid-column:span 2}
+.team-grid-5 .team-card:nth-child(4){grid-column:2 / span 2}
+.team-grid-5 .team-card:nth-child(5){grid-column:4 / span 2}
+
+/* Homepage estimate modal */
+body.estimate-modal-open{overflow:hidden}
+.estimate-modal{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:24px}
+.estimate-modal.open{display:flex}
+.estimate-modal-backdrop{position:absolute;inset:0;background:rgba(5,12,10,.74);backdrop-filter:blur(5px)}
+.estimate-modal-dialog{position:relative;z-index:1;width:min(760px,100%);max-height:min(90vh,850px);overflow:auto;border-radius:24px;background:#0f1d18;border:1px solid rgba(255,255,255,.14);box-shadow:0 28px 80px rgba(0,0,0,.42);padding:30px}
+.estimate-modal-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:#fff;font-size:26px;cursor:pointer;z-index:2}
+.estimate-modal-header{padding-right:38px;margin-bottom:18px}
+.estimate-modal-header h2{margin:8px 0 8px;font-size:clamp(28px,4vw,40px)}
+.estimate-modal-header p{margin:0;color:var(--muted)}
+.estimate-modal-header a,.estimate-modal-emergency a{color:#fff}
+.estimate-modal-form{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+.estimate-modal-form::before{display:none!important}
+.estimate-modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.estimate-modal-form label{display:block;font-weight:700;margin-bottom:14px}
+.estimate-modal-form input,.estimate-modal-form select,.estimate-modal-form textarea{width:100%;margin-top:7px}
+.estimate-modal-form textarea{min-height:110px;resize:vertical}
+.optional-label{font-weight:500;color:var(--muted);font-size:.86em}
+.estimate-modal-emergency{text-align:center;margin-top:14px;color:var(--muted);font-size:14px}
+.floating-estimate{border:0;cursor:pointer;font:inherit}
+
+/* Slightly cleaner homepage first impression */
+.hero-home .hero-content{max-width:820px}
+.hero-home .hero-panel{padding:44px}
+.hero-home h1{max-width:15ch;letter-spacing:-.035em}
+.hero-home .hero-panel>p{max-width:690px;line-height:1.65}
+
+@media (max-width:980px){
+  .team-grid-5{grid-template-columns:repeat(2,1fr)}
+  .team-grid-5 .team-card,.team-grid-5 .team-card:nth-child(4),.team-grid-5 .team-card:nth-child(5){grid-column:auto}
+  .team-grid-5 .team-card:nth-child(5){grid-column:1 / -1;width:min(100%,420px);justify-self:center}
 }
-.page-banner-overlay,
-.page-hero.page-banner::before,
-.service-page-hero::before,
-.page-banner::before{
-  background: linear-gradient(90deg, rgba(0,0,0,.22) 0%, rgba(0,0,0,.10) 45%, rgba(0,0,0,.06) 100%) !important;
+@media (max-width:760px){
+  .indiana-alert .container{width:min(100% - 24px, 1480px)}
+  .indiana-alert-inner{align-items:flex-start;flex-direction:column;gap:8px;padding-top:10px;padding-bottom:10px}
+  .indiana-alert-copy{align-items:flex-start;flex-direction:column;gap:7px}
+  .indiana-alert-message{max-width:none;width:100%}
+  .indiana-alert-counties{justify-content:flex-start;gap:7px 11px}
+  .indiana-alert-actions{width:100%;flex-wrap:wrap}
+  .indiana-alert-close{margin-left:auto}
 }
-.hero-panel,
-.page-hero-content,
-.page-banner .page-hero-content{
-  background: rgba(6,10,7,.12) !important;
-  backdrop-filter: blur(3px) !important;
-  -webkit-backdrop-filter: blur(3px) !important;
-}
-.page-hero.page-banner,
-.service-page-hero,
-.page-banner{
-  isolation:isolate;
-}
-.about-full-fit,
-.about-tpa-full-fit,
-.areas-full-fit,
-.estimates-full-fit,
-.contact-full-fit{
-  background-color:#050805 !important;
+@media (max-width:640px){
+  .indiana-alert-inner{padding-top:9px;padding-bottom:9px}
+  .indiana-alert-copy{font-size:12.75px}
+  .indiana-alert-counties{font-size:12px;gap:6px 9px}
+  .indiana-alert-badge{padding:5px 9px}
+  .indiana-alert-actions{display:grid;grid-template-columns:1fr auto;gap:7px}
+  .indiana-alert-call{grid-column:1/-1;font-size:13px}
+  .indiana-alert-help{justify-self:start;padding:6px 11px;font-size:13px}
+  .indiana-alert-close{width:29px;height:29px;font-size:20px}
+  .estimate-modal{padding:10px;align-items:flex-end}
+  .estimate-modal-dialog{max-height:94vh;border-radius:22px 22px 14px 14px;padding:22px 18px 18px}
+  .estimate-modal-grid{grid-template-columns:1fr;gap:0}
+  .estimate-modal-close{top:10px;right:10px}
+  .hero-home .hero-panel{padding:26px 22px}
+  .team-grid-5{grid-template-columns:1fr}
+  .team-grid-5 .team-card:nth-child(5){grid-column:auto;width:100%}
 }
 
-/* HERO IMAGE BRIGHTNESS UPDATE */
-.hero::before,
-.page-hero::before,
-.service-hero::before,
-.hero-banner::before {
-  background: linear-gradient(
-    rgba(0,0,0,0.18),
-    rgba(0,0,0,0.18)
-  ) !important;
+/* Refined Indiana flood banner — centered message with county row */
+.indiana-alert .container{
+  width:min(1540px, calc(100% - 48px));
+}
+.indiana-alert-inner{
+  display:grid;
+  grid-template-columns:max-content minmax(500px, 1fr) max-content;
+  align-items:center;
+  gap:28px;
+  padding-top:14px;
+  padding-bottom:14px;
+}
+.indiana-alert-badge{
+  justify-self:start;
+  padding:9px 14px;
+  font-size:15px;
+}
+.indiana-alert-message{
+  width:100%;
+  max-width:830px;
+  justify-self:center;
+  text-align:center;
+  gap:8px;
+}
+.indiana-alert-message p{
+  margin:0;
+  color:#fff;
+  font-size:14.5px;
+  line-height:1.5;
+  font-weight:600;
+}
+.indiana-alert-message p strong{
+  font-weight:800;
+}
+.indiana-alert-counties{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px 16px;
+  flex-wrap:wrap;
+  margin-top:2px;
+  font-size:13.5px;
+  font-weight:700;
+  line-height:1.35;
+  color:#fff;
+}
+.indiana-alert-counties span{
+  white-space:nowrap;
+}
+.indiana-alert-counties span:not(:last-child)::first-letter{
+  color:#29e34f;
+}
+.indiana-alert-actions{
+  justify-self:end;
+  gap:12px;
+}
+.indiana-alert-call{
+  font-size:14.5px;
+}
+.indiana-alert-help{
+  padding:9px 16px;
+  font-size:14px;
+}
+.indiana-alert-close{
+  width:34px;
+  height:34px;
+  font-size:22px;
 }
 
-.hero img,
-.page-hero img,
-.service-hero img,
-.hero-banner img,
-.hero-background,
-.hero-bg,
-.page-hero-bg {
-  filter: brightness(1.28) contrast(1.05) saturate(1.05) !important;
-}
-
-.hero-content,
-.page-hero-content,
-.service-hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-/* Performance helpers */
-img{height:auto;}
-.section,.service-detail,.alt,.site-footer{content-visibility:auto;contain-intrinsic-size:1px 800px;}
-.page-hero,.page-banner{contain:layout paint style;}
-.service-image-card img,.footer-badge,.footer-satisfaction-badge{image-rendering:auto;}
-
-
-/* CTA + services dropdown stability fixes */
-.nav-dropdown-menu{
-  max-height:min(70vh, 560px);
-  overflow-y:auto;
-  overscroll-behavior:contain;
-}
-
-@media (max-width: 980px){
-  .main-nav .nav-dropdown > .nav-dropdown-menu{
-    max-height:min(52vh, 420px) !important;
-    overflow-y:auto !important;
-    -webkit-overflow-scrolling:touch;
+@media (max-width:1200px){
+  .indiana-alert-inner{
+    grid-template-columns:max-content 1fr;
+    gap:12px 22px;
+  }
+  .indiana-alert-message{
+    max-width:none;
+  }
+  .indiana-alert-actions{
+    grid-column:1 / -1;
+    justify-self:center;
   }
 }
 
-body > .floating-estimate,
-body > .floating-call{
-  position:fixed !important;
+@media (max-width:760px){
+  .indiana-alert .container{width:min(100% - 24px, 1540px)}
+  .indiana-alert-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    padding-top:12px;
+    padding-bottom:12px;
+  }
+  .indiana-alert-badge{justify-self:auto}
+  .indiana-alert-message{text-align:center}
+  .indiana-alert-message p{font-size:13.25px;line-height:1.45}
+  .indiana-alert-counties{justify-content:center;gap:6px 12px;font-size:12.5px}
+  .indiana-alert-actions{display:flex;width:auto;justify-content:center}
+  .indiana-alert-close{margin-left:0}
 }
 
-
-.nav-dropdown-menu a.active{
-  color:#6dff5f;
-  font-weight:700;
-  background:rgba(109,255,95,0.12);
-  border-radius:10px;
+@media (max-width:480px){
+  .indiana-alert-message p br{display:none}
+  .indiana-alert-actions{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    width:100%;
+  }
+  .indiana-alert-call{width:100%;text-align:center}
+  .indiana-alert-help{justify-self:auto}
 }
