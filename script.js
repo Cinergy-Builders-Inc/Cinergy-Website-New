@@ -915,6 +915,7 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
   const openModal = () => {
     if (!modal) return;
     lastFocused = document.activeElement;
+    modal.hidden = false;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('estimate-modal-open');
@@ -926,6 +927,7 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
     if (!modal) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
+    modal.hidden = true;
     document.body.classList.remove('estimate-modal-open');
     if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
   };
