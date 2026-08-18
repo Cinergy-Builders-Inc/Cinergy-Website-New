@@ -5455,9 +5455,6 @@ body.estimate-modal-open{overflow:hidden}
 .indiana-alert-counties span{
   white-space:nowrap;
 }
-.indiana-alert-counties span:not(:last-child)::first-letter{
-  color:#29e34f;
-}
 .indiana-alert-actions{
   justify-self:end;
   gap:12px;
@@ -6003,5 +6000,89 @@ body.estimate-modal-open{overflow:hidden}
     font-weight:400!important;
     cursor:pointer!important;
     -webkit-tap-highlight-color:transparent;
+  }
+}
+
+/* Fix: county names remain clean white on desktop and mobile */
+.indiana-alert-counties,
+.indiana-alert-counties span,
+.indiana-alert-counties span::first-letter{
+  color:#fff!important;
+}
+
+/* Fix: estimate modal must open reliably at every viewport */
+.estimate-modal[hidden]{display:none!important}
+.estimate-modal.open:not([hidden]){
+  display:flex!important;
+}
+@media (min-width:761px){
+  .estimate-modal.open:not([hidden]){
+    align-items:center!important;
+    justify-content:center!important;
+  }
+}
+
+
+/* About page — preserve employee portraits cleanly with five-person layout */
+.team-grid-5{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:20px;
+  align-items:start;
+}
+.team-grid-5 .team-card{
+  grid-column:span 2;
+  min-width:0;
+}
+.team-grid-5 .team-card:nth-child(4){grid-column:2 / span 2}
+.team-grid-5 .team-card:nth-child(5){grid-column:4 / span 2}
+
+/* Do not crop/stretch team photos — show the full original image */
+.team-grid-5 .team-card img{
+  display:block;
+  width:100%;
+  height:auto!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  border-radius:18px;
+  background:#0b120e;
+}
+
+/* Keep copy spacing consistent even though source photos have different ratios */
+.team-grid-5 .team-card h3{
+  margin-top:18px;
+}
+
+@media (max-width:980px){
+  .team-grid-5{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .team-grid-5 .team-card,
+  .team-grid-5 .team-card:nth-child(4),
+  .team-grid-5 .team-card:nth-child(5){
+    grid-column:auto;
+    width:100%;
+  }
+  .team-grid-5 .team-card:nth-child(5){
+    grid-column:1 / -1;
+    width:min(100%,420px);
+    justify-self:center;
+  }
+}
+@media (max-width:640px){
+  .team-grid-5{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .team-grid-5 .team-card,
+  .team-grid-5 .team-card:nth-child(5){
+    grid-column:auto;
+    width:100%;
+  }
+  .team-grid-5 .team-card img{
+    width:100%;
+    height:auto!important;
   }
 }

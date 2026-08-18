@@ -908,18 +908,17 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
   });
 
   const modal = document.getElementById('estimateModal');
-  const openButtons = document.querySelectorAll('.js-open-estimate');
-  const closeButtons = document.querySelectorAll('[data-close-estimate]');
   let lastFocused = null;
 
   const openModal = () => {
     if (!modal) return;
     lastFocused = document.activeElement;
+    modal.removeAttribute('hidden');
     modal.hidden = false;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('estimate-modal-open');
-    const firstInput = modal.querySelector('input:not([type="hidden"]), select, textarea, button');
+    const firstInput = modal.querySelector('input:not([type="hidden"]), select, textarea');
     window.setTimeout(() => firstInput?.focus(), 50);
   };
 
@@ -927,13 +926,26 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
     if (!modal) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
-    modal.hidden = true;
+    modal.setAttribute('hidden', '');
     document.body.classList.remove('estimate-modal-open');
     if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
   };
 
-  openButtons.forEach((button) => button.addEventListener('click', openModal));
-  closeButtons.forEach((button) => button.addEventListener('click', closeModal));
+  // Delegated controls work for hero, floating, desktop, and responsive buttons.
+  document.addEventListener('click', (event) => {
+    const opener = event.target.closest('.js-open-estimate');
+    if (opener) {
+      event.preventDefault();
+      openModal();
+      return;
+    }
+    const closer = event.target.closest('[data-close-estimate]');
+    if (closer) {
+      event.preventDefault();
+      closeModal();
+    }
+  });
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && modal?.classList.contains('open')) closeModal();
   });
