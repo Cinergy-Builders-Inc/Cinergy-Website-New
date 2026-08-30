@@ -920,6 +920,16 @@ document.querySelectorAll('[data-before-after-card]').forEach((card) => {
     if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
   };
 
+  // Bind directly so desktop CTAs work even if another component stops event bubbling.
+  document.querySelectorAll('.js-open-estimate').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      openModal();
+    });
+  });
+
+  // Delegated fallback for any estimate CTA inserted later.
   document.addEventListener('click', (event) => {
     const opener = event.target.closest('.js-open-estimate');
     if (opener) {
