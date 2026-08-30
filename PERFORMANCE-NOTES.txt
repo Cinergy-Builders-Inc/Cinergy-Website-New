@@ -20,3 +20,8 @@ Best filenames to keep consistent:
 
 Important:
 The biggest speed win will come from your image sizes, not from hosting.
+
+
+Vercel Speed Insights
+---------------------
+Static-site Speed Insights is enabled with window.si and /_vercel/speed-insights/script.js on all HTML pages. Keep Speed Insights enabled in the Vercel project dashboard.
